@@ -1,0 +1,11 @@
+{
+  "name": "p3_robert_kim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch css/sass.scss:css/style.css --style expanded"
+  },
+  "author": "ROBERT_Kim",
+  "license": "ISC"
+}
