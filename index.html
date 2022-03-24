@@ -6,58 +6,47 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width">
 	    <link rel="stylesheet" href="css/style.css">
-	    <title>Oh! My Food!</title>
+	    <title>OhMyFood</title>
     </head>
 
     <body>
 
         <!-- ********** HEADER ********** -->
         <header>
-            <a href="#"><h1>ohmyfood</h1></a>
+            <img id="logo-site" src="./images/logo/ohmyfood.png" alt="Logo Ohmyfood" />
         </header>
 
 
         <!-- ********** MAIN ********** -->
         <main>
 
-            <!-- ***** MAIN > PRESENTATION ***** -->
-            <section class="index-section presentation">
-
                 <!-- *** MAIN > PRESENTATION > GEOLOC ET INTRO *** -->
-                <article class="index-article geoloc">
-                    <i></i>
-                    <p><strong>Belleville</strong></p>
-                </article>
+            <section class="section index-section __infoposition">
+                <h1 class="title index-title">Réservez le menu qui vous convient</h1>
 
-                <article class="index-article intro">
-                    <h2>Réservez le menu qui vous convient</h2>
+                <form class="form __infoposition">
                     <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button class="btn btn__index">Explorer nos restaurants</button>
-                </article>
+                    <button type="submit" class="btn btn__infoposition">Explorer nos restaurants</button>
+
+                    <output class="output output__infoposition">
+                        <i></i>Paris, Belleville
+                    </output>
+                </form>
+
+                
+            </section>
 
                 <!-- *** MAIN > PRESENTATION > FONCTIONNEMENT *** -->
-                <article class="index-section fonctionnement">
-                    <h2>Fonctionnement</h2>
+                <section class="index-section fonctionnement">
+                    <h1>Fonctionnement</h1>
                 
-                    <div class="card card__body card-index">
-                        <div>1</div>
-                        <i></i>
-                        <p><strong>Choisissez un restaurant</strong></p>
-                    </div>
+                    <ol style="list-style-type:decimal">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
 
-                    <div class="card card__body card-index">
-                        <div>2</div>
-                        <i></i>
-                        <p><strong>Composez votre menu</strong></p>
-                    </div>
-
-                    <div class="card card__body card-index">
-                        <div>3</div>
-                        <i></i>
-                    <p><strong>Dégustez au restaurant</strong></p>
-                    </div>
-
-                </article>
+                </section>
 
             </section>
 
@@ -65,41 +54,41 @@
 
             <!-- ***** MAIN > RESTAURANTS ***** -->
             <section class="index-section restaurants">
-                <h2>Restaurants</h2>
+                <h1>Restaurants</h1>
 
                 <article class="card card__big">
-                    <img src="" alt="" class="card card__big_ img" />
+                    <a href="pages/menu-restau-01.html"><img src="images/restaurants/la-palette-du-gout.jpg" alt="Photographie - La Palette du Goût (restaurant)" class="card card__big_ img" /></a>
                     <div class="card card__body card-restau-index">
-                        <h4>La palette du goût</h4>
+                        <h2>La palette du goût</h2>
                         <p>Ménilmontant</p>
-                        <i></i>
+                        <a href="#"><i></i></a>
                     </div>
                 </article>
 
                 <article class="card card__big">
-                    <img src="" alt="" class="card card__big_ img" />
+                    <a href="pages/menu-restau-02.html"><img src="images/restaurants/la-note-enchantee.jpg" alt="Photographie - La Note enchantée (restaurant)" class="card card__big_ img" /></a>
                     <div class="card card__body card-restau-index">
-                        <h4>La note enchantée</h4>
+                        <h2>La note enchantée</h2>
                         <p>Charonne</p>
-                        <i></i>
+                        <a href="#"><i></i></a>
                     </div>
                 </article>
 
                 <article class="card card__big">
-                    <img src="" alt="" class="card card__big_ img" />
+                    <a href="pages/menu-restau-03.html"><img src="images/restaurants/a-la-francaise.jpg" alt="Photographie - À la française (restaurant)" class="card card__big_ img" /></a>
                     <div class="card card__body card-restau-index">
-                        <h4>À la française</h4>
+                        <h2>À la française</h2>
                         <p>Cité Rouge</p>
-                        <i></i>
+                        <a href="#"><i></i></a>
                     </div>
                 </article>
 
                 <article class="card card__big">
-                    <img src="" alt="" class="card card__big_ img" />
+                    <a href="pages/menu-restau-04.html"><img src="images/restaurants/le-delice-des-sens.jpg" alt="Photographie - Le délice des sens (restaurant)" class="card card__big_ img" /></a>
                     <div class="card card__body card-restau-index">
-                        <h4>Le délice des sens</h4>
+                        <h2>Le délice des sens</h2>
                         <p>Folie-Méricourt</p>
-                        <i></i>
+                        <a href="#"><i></i></a>
                     </div>
                 </article>
 
@@ -110,13 +99,17 @@
 
         <!-- ********** FOOTER ********** -->
         <footer>
-            <h7>ohmyfood</h7>
-            <ul class="list list__footer">
-                <li><a href="#" class="link link__footer"><i></i>Proposer un restaurant</a></li>
-                <li><a href="#" class="link link__footer"><i></i>Devenir partenaire</a></li>
-                <li><a href="#" class="link link__footer">Mentions légales</a></li>
-                <li><a href="#" class="link link__footer">Contact</a></li>
-            </ul>
+            <h3>ohmyfood</h3>
+
+            <nav class="menu-nav">
+                <ul class="list list__footer">
+                    <li><a href="#" class="link link__footer"><i></i>Proposer un restaurant</a></li>
+                    <li><a href="#" class="link link__footer"><i></i>Devenir partenaire</a></li>
+                    <li><a href="#" class="link link__footer">Mentions légales</a></li>
+                    <li><a href="#" class="link link__footer">Contact</a></li>
+                </ul>
+            </nav>
+            
         </footer>
 
     </body>
