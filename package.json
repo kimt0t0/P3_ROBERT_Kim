@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch css/sass.scss:css/style.css --style expanded"
+    "sass": "sass --watch css/style.scss:css/style.css --style expanded"
   },
   "author": "ROBERT_Kim",
   "license": "ISC"
