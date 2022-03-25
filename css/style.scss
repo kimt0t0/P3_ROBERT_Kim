@@ -105,7 +105,7 @@ body {
 
 /* ***** ELEMENTS ***** */
 .btn {
-    background-color: mix($secondary-color, $primary-color);
+    background: linear-gradient(to top left, $primary-color, $secondary-color);
     color: white;
     padding: 15px;
     border-radius: 50px;
