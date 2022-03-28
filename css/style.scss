@@ -5,7 +5,7 @@ $tertiary-color: #99E2D0;
 $grey-01: #F6F6F6;
 $grey-02: darken($grey-01, 5%);
 $grey-03: darken($grey-01, 7%);
-$grey-04: darken($grey-01, 80%);
+$grey-04: darken($grey-01, 50%);
 
 
 /* ***** MIXINS ***** */
@@ -52,6 +52,15 @@ $grey-04: darken($grey-01, 80%);
     font-size: 14px;
     font-weight: bold;
 }
+
+/* ***** MISE EN FORME LISTES ***** */
+@counter-style circled-digits {
+    system: fixed;
+    symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩;
+    suffix: " ";
+}
+
+
 
 /* ********** GÉNÉRAL ********** */
 
@@ -180,17 +189,32 @@ footer {
         padding: 30px;
     }
     &.__fonctionnement {
-        .guidelines {
-            width: 75%;
-            background-color: $grey-01;
-            text-align: center;
-            padding: 15px;
-            margin-bottom: 15px;
-            @include top-corners;
-            @include bottom-corners;
-            @include border;
-            @include small-bold;
+        .__liste {
+            list-style: circled-digits;
+            }
+            .guidelines {
+                width: 75%;
+                background-color: $grey-01;
+                display: flex;
+                justify-content: space-around;
+                padding: 15px;
+                margin-bottom: 15px;
+                @include top-corners;
+                @include bottom-corners;
+                @include border;
+                @include small-bold;
+                .__icone {
+                    color: $grey-04;
+                }
+                &:hover {
+                    background-color: lighten($primary-color, 35%);
+                    cursor: pointer;
+                    .__icone {
+                        color: $primary-color;
+                    }
+            }
         }
+        
     }
     &.__restaurants {
         background-color: $grey-01;
