@@ -241,20 +241,36 @@ footer {
                 }
             }
             .textcard {
-                flex-wrap: wrap;
                 @include textcard;
                 .--cta {
                     float: right;
                     position: relative;
-                    margin-top: -35px;
+                    margin-top: -40px;
                     padding-right: 10px;
                     color: black;
+                    .__cta-icone {
+                        .--unchecked {
+                            display: block;
+                        }
+                        .--checked {
+                            display: none;
+                        }
+                    }
                     .__input {
                         position: absolute;
-                        left: -9999px;
-                        &:checked + label::before{
-                            /* à compléter */
+                        opacity: 0;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        &:checked + .__cta-icone {
+                            .--unchecked {
+                                display: none;
                             }
+                            .--checked {
+                                display: block;
+                                color: $primary-color;
+                            }
+                        }
                     }
                 }
             }
