@@ -4,12 +4,12 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-01: #F6F6F6;
 $grey-02: darken($grey-01, 5%);
-$grey-03: darken($grey-01, 15%);
+$grey-03: darken($grey-01, 7%);
 $grey-04: darken($grey-01, 80%);
 
 
 /* ***** MIXINS ***** */
-/* ANGLES */
+/* MIXINS > ANGLES */
 @mixin top-corners {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -20,13 +20,13 @@ $grey-04: darken($grey-01, 80%);
     border-bottom-right-radius: 15px;
 }
 
-/* BORDURES */
+/* MIXINS > BORDURES */
 @mixin border {
-    border: 2px solid transparent;
+    border: 0px solid transparent;
     box-shadow: 5px 5px 5px #c2c2c2c4;
 }
 
-/* CARDS */
+/* MIXINS > CARDS */
 @mixin textcard {
     box-sizing: border-box;
     width: 100%;
@@ -47,7 +47,7 @@ $grey-04: darken($grey-01, 80%);
     }
 }
 
-/* TEXTES */
+/* MIXINS > TEXTES */
 @mixin small-bold {
     font-size: 14px;
     font-weight: bold;
@@ -55,7 +55,7 @@ $grey-04: darken($grey-01, 80%);
 
 /* ********** GÉNÉRAL ********** */
 
-/* ***** POLICES ***** */
+/* ***** GÉNÉRAL > POLICES ***** */
 @font-face {
     font-family: 'Roboto';
     src: url('fonts/roboto/Roboto-Regular.ttf'),
@@ -103,7 +103,7 @@ body {
     }
 }
 
-/* ***** ELEMENTS ***** */
+/* ***** GÉNÉRAL > ELEMENTS ***** */
 .btn {
     background: linear-gradient(to top left, $primary-color, $secondary-color);
     color: white;
@@ -116,7 +116,7 @@ body {
     @include border;
 }
 
-/* ***** HEADER ***** */
+/* ***** GÉNÉRAL > HEADER ***** */
 header {
     display: flex;
     justify-content: center;
@@ -127,7 +127,7 @@ header {
     }
 }
 
-/* ***** FOOTER ***** */
+/* ***** GÉNÉRAL > FOOTER ***** */
 
 footer {
     padding: 30px;
@@ -154,7 +154,7 @@ footer {
 
 /* ********** SPÉCIFIQUE ********** */
 
-/* ***** INDEX ***** */
+/* ***** SPÉCIFIQUE > INDEX ***** */
 .section {
     padding-bottom: 50px;
     &.__infoposition {
