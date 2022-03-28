@@ -6,6 +6,7 @@ $grey-01: #F6F6F6;
 $grey-02: darken($grey-01, 5%);
 $grey-03: darken($grey-01, 7%);
 $grey-04: darken($grey-01, 50%);
+$gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 
 
 /* ***** MIXINS ***** */
@@ -23,7 +24,7 @@ $grey-04: darken($grey-01, 50%);
 /* MIXINS > BORDURES */
 @mixin border {
     border: 0px solid transparent;
-    box-shadow: 5px 5px 5px #c2c2c2c4;
+    box-shadow: 5px 5px 5px $grey-03;
 }
 
 /* MIXINS > CARDS */
@@ -51,13 +52,6 @@ $grey-04: darken($grey-01, 50%);
 @mixin small-bold {
     font-size: 14px;
     font-weight: bold;
-}
-
-/* ***** MISE EN FORME LISTES ***** */
-@counter-style circled-digits {
-    system: fixed;
-    symbols: ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩;
-    suffix: " ";
 }
 
 
@@ -89,6 +83,7 @@ $grey-04: darken($grey-01, 50%);
 
 body {
     font-family: Roboto, Arial, Verdana, sans-serif;
+    counter-reset: section;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -114,7 +109,7 @@ body {
 
 /* ***** GÉNÉRAL > ELEMENTS ***** */
 .btn {
-    background: linear-gradient(to top left, $primary-color, $secondary-color);
+    background: $gradient-01;
     color: white;
     padding: 15px;
     border-radius: 50px;
@@ -190,21 +185,33 @@ footer {
     }
     &.__fonctionnement {
         .__liste {
-            list-style: circled-digits;
-            }
+            margin: 0;
+            padding: 0;
             .guidelines {
-                width: 75%;
+                width: 80%;
                 background-color: $grey-01;
                 display: flex;
-                justify-content: space-around;
-                padding: 15px;
+                justify-content: space-evenly;
+                align-content: center;
+                padding: 22px 40px 20px 0px;
                 margin-bottom: 15px;
                 @include top-corners;
                 @include bottom-corners;
                 @include border;
-                @include small-bold;
+                &::before {
+                    counter-increment: section;
+                    content: counter(section);
+                    display: flex;
+                    margin: 0;
+                    margin-left: -25px;
+                    border-radius: 100%;
+                    padding: 4px 7px 3px 7px;
+                    color: white;
+                    background-color: $primary-color;
+                }
                 .__icone {
                     color: $grey-04;
+                    padding-top: 2px;
                 }
                 &:hover {
                     background-color: lighten($primary-color, 35%);
@@ -213,6 +220,8 @@ footer {
                         color: $primary-color;
                     }
             }
+        }
+           
         }
         
     }
@@ -232,7 +241,22 @@ footer {
                 }
             }
             .textcard {
+                flex-wrap: wrap;
                 @include textcard;
+                .--cta {
+                    float: right;
+                    position: relative;
+                    margin-top: -35px;
+                    padding-right: 10px;
+                    color: black;
+                    .__input {
+                        position: absolute;
+                        left: -9999px;
+                        &:checked + label::before{
+                            /* à compléter */
+                            }
+                    }
+                }
             }
         }
     }
