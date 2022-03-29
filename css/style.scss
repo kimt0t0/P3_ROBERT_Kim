@@ -6,19 +6,20 @@ $grey-01: #F6F6F6;
 $grey-02: darken($grey-01, 5%);
 $grey-03: darken($grey-01, 7%);
 $grey-04: darken($grey-01, 50%);
+$grey-05: darken($grey-01, 80%);
 $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 
 
 /* ***** MIXINS ***** */
 /* MIXINS > ANGLES */
 @mixin top-corners {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 @mixin bottom-corners {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 /* MIXINS > BORDURES */
@@ -280,8 +281,53 @@ footer {
 
     /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
 
-    header {
+    /* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
+    .header__menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
         .__back {
-            float: left;
+            text-decoration: none;
+            .fa-solid.fa-arrow-left {
+                display: block;
+                color: $grey-05;
+            }
+        }
+    }
+
+    /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
+    main {
+        background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
+        background-size: 400px;
+    }
+
+    .section.__menu {
+        margin-top: 250px;
+        padding: 10px 10px 40px 10px;
+        @include top-corners();
+        background-color: $grey-01;
+        .__title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: center;
+            margin: auto;
+            .__menu {
+                font-family: Shrikhand;
+            }
+        }
+        .subtitle.--big-letters {
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 14px;
+            &::after {
+                display: flex;
+                content: "";
+                width: 12%;
+                border-bottom: 3px #99E2D0 solid;
+            }
+        }
+        .__textcard {
+            @include textcard;
         }
     }
