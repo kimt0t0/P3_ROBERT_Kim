@@ -121,6 +121,31 @@ body {
     @include border;
 }
 
+.__cta-icone {
+    .--unchecked {
+        display: block;
+    }
+    .--checked {
+        display: none;
+    }
+}
+.__input {
+    position: absolute;
+    opacity: 0;
+    &:hover {
+        cursor: pointer;
+    }
+    &:checked + .__cta-icone {
+        .--unchecked {
+            display: none;
+        }
+        .--checked {
+            display: block;
+            color: $primary-color;
+        }
+    }
+}
+
 /* ***** GÉNÉRAL > HEADER ***** */
 header {
     display: flex;
@@ -136,7 +161,7 @@ header {
 
 footer {
     padding: 30px;
-    background-color: $grey-04; 
+    background-color: $grey-04;
     .title.__footer, .link.__footer {
         color: white;
         text-decoration: none;
@@ -249,34 +274,10 @@ footer {
                     margin-top: -40px;
                     padding-right: 10px;
                     color: black;
-                    .__cta-icone {
-                        .--unchecked {
-                            display: block;
-                        }
-                        .--checked {
-                            display: none;
-                        }
-                    }
-                    .__input {
-                        position: absolute;
-                        opacity: 0;
-                        &:hover {
-                            cursor: pointer;
-                        }
-                        &:checked + .__cta-icone {
-                            .--unchecked {
-                                display: none;
-                            }
-                            .--checked {
-                                display: block;
-                                color: $primary-color;
-                            }
-                        }
-                    }
-                }
             }
         }
     }
+}
 
 
     /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
@@ -315,6 +316,10 @@ footer {
             .__menu {
                 font-family: Shrikhand;
             }
+            .--cta {
+                align-content: center;
+                margin: auto;
+            }
         }
         .subtitle.--big-letters {
             text-transform: uppercase;
@@ -329,5 +334,10 @@ footer {
         }
         .__textcard {
             @include textcard;
+            .__price {
+                float: right;
+                margin-top: -30px;
+                @include small-bold;
+            }
         }
     }
