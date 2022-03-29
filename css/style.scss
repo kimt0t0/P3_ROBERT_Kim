@@ -55,6 +55,24 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
     font-weight: bold;
 }
 
+/* MIXINS > CHECKBOXES */
+@mixin checkbox {
+    .__input {
+        position: absolute;
+        opacity: 0;
+        &:hover {
+            cursor: pointer;
+        }
+        &:checked + .__cta-icone {
+            .--unchecked {
+                display: none;
+            }
+            .--checked {
+                display: block;
+            }
+        }
+    }
+}
 
 
 /* ********** GÉNÉRAL ********** */
@@ -109,6 +127,7 @@ body {
 }
 
 /* ***** GÉNÉRAL > ELEMENTS ***** */
+/* *** GÉNÉRAL > ELEMENTS > BOUTONS *** */
 .btn {
     background: $gradient-01;
     color: white;
@@ -121,6 +140,7 @@ body {
     @include border;
 }
 
+/* *** GÉNÉRAL > ELEMENTS > CTA LIKE *** */
 .__cta-icone {
     .--unchecked {
         display: block;
@@ -129,22 +149,15 @@ body {
         display: none;
     }
 }
+@include checkbox;
 .__input {
-    position: absolute;
-    opacity: 0;
-    &:hover {
-        cursor: pointer;
-    }
     &:checked + .__cta-icone {
-        .--unchecked {
-            display: none;
-        }
         .--checked {
-            display: block;
             color: $primary-color;
         }
     }
 }
+
 
 /* ***** GÉNÉRAL > HEADER ***** */
 header {
@@ -245,11 +258,9 @@ footer {
                     .__icone {
                         color: $primary-color;
                     }
-            }
+                }
+            }   
         }
-           
-        }
-        
     }
     &.__restaurants {
         background-color: $grey-01;
@@ -274,70 +285,108 @@ footer {
                     margin-top: -40px;
                     padding-right: 10px;
                     color: black;
+                }
             }
-        }
     }
 }
 
 
-    /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
+/* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
 
-    /* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
-    .header__menu {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        .__back {
-            text-decoration: none;
-            .fa-solid.fa-arrow-left {
-                display: block;
-                color: $grey-05;
-            }
+/* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
+.header__menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .__back {
+        text-decoration: none;
+        .fa-solid.fa-arrow-left {
+            display: block;
+            color: $grey-05;
         }
     }
+}
 
-    /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
-    main {
-        background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
-        background-size: 400px;
-    }
+/* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
+main {
+    background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
+    background-size: 400px;
+}
 
-    .section.__menu {
-        margin-top: 250px;
-        padding: 10px 10px 40px 10px;
-        @include top-corners();
-        background-color: $grey-01;
-        .__title {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
+.section.__menu {
+    margin-top: 250px;
+    padding: 10px 10px 40px 10px;
+    @include top-corners();
+    background-color: $grey-01;
+    .__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        margin: auto;
+        .__menu {
+            font-family: Shrikhand;
+        }
+        .--cta {
             align-content: center;
             margin: auto;
-            .__menu {
-                font-family: Shrikhand;
-            }
-            .--cta {
-                align-content: center;
-                margin: auto;
-            }
-        }
-        .subtitle.--big-letters {
-            text-transform: uppercase;
-            font-weight: lighter;
-            font-size: 14px;
-            &::after {
-                display: flex;
-                content: "";
-                width: 12%;
-                border-bottom: 3px #99E2D0 solid;
-            }
-        }
-        .__textcard {
-            @include textcard;
-            .__price {
-                float: right;
-                margin-top: -30px;
-                @include small-bold;
-            }
         }
     }
+    .subtitle.--big-letters {
+        text-transform: uppercase;
+        font-weight: lighter;
+        font-size: 14px;
+        &::after {
+            display: flex;
+            content: "";
+            width: 12%;
+            border-bottom: 3px #99E2D0 solid;
+        }
+    }
+    .__textcard {
+        @include textcard;
+        @include top-corners;
+        display: flex;
+        flex-direction: row;
+        .__display-text {
+            width: 100%;
+            flex-direction: row;
+        }
+        .__display-price {
+            display:block;
+            align-self: flex-end;
+            padding-bottom: 5px;
+            @include small-bold;
+        }
+        .__cta-menu.--menu {
+            .__cta-icone.--menu {
+                display: none;
+            }
+        }
+        /* Bouton validation élément menu visible */
+        &:hover {
+            .__display-text {
+                width: 80%;
+            }
+            .__cta-menu.--menu {
+                @include checkbox;
+                /* temporaire: */
+                .__input.--menu {
+                    opacity: 100%;
+                }
+                width: 20%;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                margin-left: 15px;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                background-color: $tertiary-color;
+                .--checked.--menu {
+                    display: block;
+                    color: white;
+                }
+            }    
+        }
+    }
+}
