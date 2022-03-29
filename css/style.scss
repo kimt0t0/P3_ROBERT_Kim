@@ -49,30 +49,41 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
     }
 }
 
-/* MIXINS > TEXTES */
-@mixin small-bold {
-    font-size: 14px;
-    font-weight: bold;
-}
-
 /* MIXINS > CHECKBOXES */
 @mixin checkbox {
+    .__icone {
+        .--unchecked {
+            display: block;
+        }
+        .--checked {
+            display: none;
+        }
+    }
     .__input {
         position: absolute;
         opacity: 0;
         &:hover {
             cursor: pointer;
         }
-        &:checked + .__cta-icone {
+        &:checked + .__icone {
             .--unchecked {
                 display: none;
             }
             .--checked {
                 display: block;
+                color: $primary-color;
             }
         }
     }
 }
+
+
+/* MIXINS > TEXTES */
+@mixin small-bold {
+    font-size: 14px;
+    font-weight: bold;
+}
+
 
 
 /* ********** GÉNÉRAL ********** */
@@ -110,16 +121,20 @@ body {
     flex-wrap: wrap;
     white-space: normal;
     margin: auto;
+
     h1 {
         font-size: 24px;
         font-weight: bold;
     }
+
     h2 {
         font-size: 18px;
     }
+
     p, nav {
         font-size: 18px;
     }
+
     ul {
         margin: 0;
         padding: 0;
@@ -140,22 +155,9 @@ body {
     @include border;
 }
 
-/* *** GÉNÉRAL > ELEMENTS > CTA LIKE *** */
-.__cta-icone {
-    .--unchecked {
-        display: block;
-    }
-    .--checked {
-        display: none;
-    }
-}
-@include checkbox;
-.__input {
-    &:checked + .__cta-icone {
-        .--checked {
-            color: $primary-color;
-        }
-    }
+/* *** GÉNÉRAL > ÉLÉMENTS > CTA LIKE *** */
+.cta {
+    @include checkbox;
 }
 
 
@@ -183,7 +185,8 @@ footer {
     .title.__footer {
         font-family: Shrikhand;
         font-weight: bold;
-        font-size: 18px;}
+        font-size: 18px;
+    }
     .menu-nav {
         .list-style.__footer {
             list-style: none;
@@ -279,7 +282,7 @@ footer {
             }
             .textcard {
                 @include textcard;
-                .--cta {
+                .cta {
                     float: right;
                     position: relative;
                     margin-top: -40px;
@@ -287,8 +290,9 @@ footer {
                     color: black;
                 }
             }
+        }
     }
-}
+
 
 
 /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
@@ -327,7 +331,7 @@ main {
         .__menu {
             font-family: Shrikhand;
         }
-        .--cta {
+        .cta {
             align-content: center;
             margin: auto;
         }
@@ -346,11 +350,13 @@ main {
     .__textcard {
         @include textcard;
         @include top-corners;
+        padding: 0;
         display: flex;
         flex-direction: row;
         .__display-text {
             width: 100%;
             flex-direction: row;
+            padding: 5px;
         }
         .__display-price {
             display:block;
@@ -358,30 +364,28 @@ main {
             padding-bottom: 5px;
             @include small-bold;
         }
-        .__cta-menu.--menu {
-            .__cta-icone.--menu {
-                display: none;
-            }
-        }
         /* Bouton validation élément menu visible */
         &:hover {
             .__display-text {
                 width: 80%;
             }
-            .__cta-menu.--menu {
+            .cta.--menu {
                 @include checkbox;
-                /* temporaire: */
-                .__input.--menu {
-                    opacity: 100%;
-                }
                 width: 20%;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
                 margin-left: 15px;
                 display: flex;
-                justify-content: center;
-                align-content: center;
                 background-color: $tertiary-color;
+                /* temporaire: */
+                .__input.--menu {
+                    opacity: 100%;
+                    position: relative;
+                    margin: auto;
+                }
+                .__icone.--menu {
+                    margin: auto;
+                }
                 .--checked.--menu {
                     display: block;
                     color: white;
