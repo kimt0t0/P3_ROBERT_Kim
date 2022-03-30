@@ -62,9 +62,6 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
     .__input {
         position: absolute;
         opacity: 0;
-        &:hover {
-            cursor: pointer;
-        }
         &:checked + .__icone {
             .--unchecked {
                 display: none;
@@ -158,6 +155,9 @@ body {
 /* *** GÉNÉRAL > ÉLÉMENTS > CTA LIKE *** */
 .cta {
     @include checkbox;
+    .__input:hover {
+        cursor: pointer;
+    }
 }
 
 
@@ -370,25 +370,34 @@ main {
                 width: 80%;
             }
             .cta.--menu {
-                @include checkbox;
                 width: 20%;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
                 margin-left: 15px;
                 display: flex;
+                justify-content: center;
+                align-content: center;
                 background-color: $tertiary-color;
+                color: white;
                 /* temporaire: */
                 .__input.--menu {
-                    opacity: 100%;
-                    position: relative;
+                    opacity: 0%;
+                    position: absolute;
                     margin: auto;
+                    margin-top: 20px;
+                    &:checked + .__icone.--menu {
+                        .--checked.--menu {
+                            display: block;
+                            color: white;
+                        }
+                    }
                 }
                 .__icone.--menu {
+                    align-self: center;
                     margin: auto;
                 }
                 .--checked.--menu {
                     display: block;
-                    color: white;
                 }
             }    
         }
