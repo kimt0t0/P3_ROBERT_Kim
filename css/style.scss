@@ -113,7 +113,7 @@ body {
     counter-reset: section;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: space-between;
     flex-wrap: wrap;
     white-space: normal;
@@ -145,12 +145,16 @@ body {
     color: white;
     padding: 15px;
     border-radius: 50px;
+    .__order {
+        width: 120px;
+    }
     &:hover {
         cursor: pointer;
     }
     @include small-bold; 
     @include border;
 }
+
 
 /* *** GÉNÉRAL > ÉLÉMENTS > CTA LIKE *** */
 .cta {
@@ -318,6 +322,9 @@ main {
 }
 
 .section.__menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     margin-top: 250px;
     padding: 10px 10px 40px 10px;
     @include top-corners();
@@ -325,9 +332,8 @@ main {
     .__title {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-content: center;
-        margin: auto;
+        justify-content: space-between;
+        margin-left: 10px;
         .__menu {
             font-family: Shrikhand;
         }
@@ -336,70 +342,80 @@ main {
             margin: auto;
         }
     }
-    .subtitle.--big-letters {
-        text-transform: uppercase;
-        font-weight: lighter;
-        font-size: 14px;
-        &::after {
-            display: flex;
-            content: "";
-            width: 12%;
-            border-bottom: 3px #99E2D0 solid;
-        }
-    }
-    .__textcard {
-        @include textcard;
-        @include top-corners;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        .__display-text {
-            width: 100%;
-            flex-direction: row;
-            padding: 5px;
-        }
-        .__display-price {
-            display:block;
-            align-self: flex-end;
-            padding-bottom: 5px;
-            @include small-bold;
-        }
-        /* Bouton validation élément menu visible */
-        &:hover {
-            .__display-text {
-                width: 80%;
-            }
-            .cta.--menu {
-                width: 20%;
-                border-top-right-radius: 20px;
-                border-bottom-right-radius: 20px;
-                margin-left: 15px;
+    .__entrees, .__plats, .__desserts {
+        margin-bottom: 40px;
+        .subtitle.--big-letters {
+            text-transform: uppercase;
+            font-weight: lighter;
+            font-size: 14px;
+            &::after {
                 display: flex;
-                justify-content: center;
-                align-content: center;
-                background-color: $tertiary-color;
-                color: white;
-                /* temporaire: */
-                .__input.--menu {
-                    opacity: 0%;
-                    position: absolute;
-                    margin: auto;
-                    margin-top: 20px;
-                    &:checked + .__icone.--menu {
-                        .--checked.--menu {
-                            display: block;
-                            color: white;
+                content: "";
+                width: 12%;
+                border-bottom: 3px #99E2D0 solid;
+            }
+        }
+        .__textcard {
+            @include textcard;
+            @include top-corners;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            .__display-text {
+                width: 100%;
+                flex-direction: row;
+                padding: 5px;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            .__display-price {
+                display:block;
+                align-self: flex-end;
+                padding: 10px;
+                padding-right: 15px;
+                @include small-bold;
+            }
+            /* Bouton validation élément menu visible */
+            &:hover {
+                .__display-text {
+                    width: 80%;
+                }
+                .cta.--menu {
+                    width: 20%;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    margin-left: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    background-color: $tertiary-color;
+                    color: white;
+                    /* temporaire: */
+                    .__input.--menu {
+                        opacity: 0%;
+                        position: absolute;
+                        margin: auto;
+                        margin-top: 20px;
+                        &:checked + .__icone.--menu {
+                            .--checked.--menu {
+                                display: block;
+                                color: white;
+                            }
                         }
                     }
-                }
-                .__icone.--menu {
-                    align-self: center;
-                    margin: auto;
-                }
-                .--checked.--menu {
-                    display: block;
-                }
-            }    
+                    .__icone.--menu {
+                        align-self: center;
+                        margin: auto;
+                    }
+                    .--checked.--menu {
+                        display: block;
+                    }
+                }    
+            }
         }
+    }
+    .btn.__order {
+        width: 60%;
+        align-self: center;
     }
 }
