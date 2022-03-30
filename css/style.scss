@@ -312,8 +312,22 @@ footer {
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
 main {
+    &.restau-01 {
     background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
     background-size: 400px;
+    }
+    &.restau-02 {
+        background: url("../images/restaurants/la-note-enchantee.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-03 {
+        background: url("../images/restaurants/a-la-francaise.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-04 {
+        background: url("../images/restaurants/le-delice-des-sens.jpg") no-repeat;
+        background-size: 400px;
+    }
 }
 
 .section.__menu {
