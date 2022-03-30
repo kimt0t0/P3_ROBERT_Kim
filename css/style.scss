@@ -49,31 +49,6 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
     }
 }
 
-/* MIXINS > CHECKBOXES */
-@mixin checkbox {
-    .__icone {
-        .--unchecked {
-            display: block;
-        }
-        .--checked {
-            display: none;
-        }
-    }
-    .__input {
-        position: absolute;
-        opacity: 0;
-        &:checked + .__icone {
-            .--unchecked {
-                display: none;
-            }
-            .--checked {
-                display: block;
-                color: $primary-color;
-            }
-        }
-    }
-}
-
 
 /* MIXINS > TEXTES */
 @mixin small-bold {
@@ -156,14 +131,34 @@ body {
 }
 
 
-/* *** GÉNÉRAL > ÉLÉMENTS > CTA LIKE *** */
-.cta {
-    @include checkbox;
-    .__input:hover {
-        cursor: pointer;
+/* *** GÉNÉRAL > ÉLÉMENTS > CHECKBOXES *** */
+/* LIKE */
+.cta.__like {
+    .__input {
+        position: absolute;
+        opacity: 0;
+        &:hover {
+            cursor: pointer;
+        }
+        &:checked + .__icone {
+            .--unchecked {
+                display: none;
+            }
+            .--checked {
+                display: block;
+                color: $primary-color;
+            }
+        }
+    }
+    .__icone {
+        .--unchecked {
+            display: block;
+        }
+        .--checked {
+            display: none;
+        }
     }
 }
-
 
 /* ***** GÉNÉRAL > HEADER ***** */
 header {
@@ -317,8 +312,22 @@ footer {
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
 main {
+    &.restau-01 {
     background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
     background-size: 400px;
+    }
+    &.restau-02 {
+        background: url("../images/restaurants/la-note-enchantee.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-03 {
+        background: url("../images/restaurants/a-la-francaise.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-04 {
+        background: url("../images/restaurants/le-delice-des-sens.jpg") no-repeat;
+        background-size: 400px;
+    }
 }
 
 .section.__menu {
@@ -372,15 +381,20 @@ main {
                 display:block;
                 align-self: flex-end;
                 padding: 10px;
-                padding-right: 15px;
+                padding-right: 10px;
                 @include small-bold;
             }
-            /* Bouton validation élément menu visible */
+            .cta.--menu {
+                width: 0%;
+                opacity: 0;
+            }
             &:hover {
                 .__display-text {
                     width: 80%;
                 }
-                .cta.--menu {
+               .cta.--menu {
+                    opacity: 100%;  
+                    display: flex;                
                     width: 20%;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
@@ -390,27 +404,29 @@ main {
                     align-content: center;
                     background-color: $tertiary-color;
                     color: white;
-                    /* temporaire: */
+                    &:hover {
+                        cursor: pointer;
+                    }
                     .__input.--menu {
                         opacity: 0%;
                         position: absolute;
                         margin: auto;
                         margin-top: 20px;
-                        &:checked + .__icone.--menu {
-                            .--checked.--menu {
-                                display: block;
-                                color: white;
-                            }
+                        &:hover {
+                            cursor: pointer;
                         }
                     }
                     .__icone.--menu {
                         align-self: center;
                         margin: auto;
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                     .--checked.--menu {
                         display: block;
                     }
-                }    
+                }
             }
         }
     }
