@@ -57,7 +57,6 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 }
 
 
-
 /* ********** GÉNÉRAL ********** */
 
 /* ***** GÉNÉRAL > POLICES ***** */
@@ -120,8 +119,9 @@ body {
     color: white;
     padding: 15px;
     border-radius: 50px;
-    .__order {
-        width: 120px;
+    &.__order {
+        width: 50%;
+        align-self: center;
     }
     &:hover {
         cursor: pointer;
@@ -129,7 +129,6 @@ body {
     @include small-bold; 
     @include border;
 }
-
 
 /* *** GÉNÉRAL > ÉLÉMENTS > CHECKBOXES *** */
 /* LIKE */
@@ -175,7 +174,7 @@ header {
 
 footer {
     padding: 30px;
-    background-color: $grey-04;
+    background-color: $grey-05;
     .title.__footer, .link.__footer {
         color: white;
         text-decoration: none;
@@ -297,19 +296,6 @@ footer {
 /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
-.header__menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    .__back {
-        text-decoration: none;
-        .fa-solid.fa-arrow-left {
-            display: block;
-            color: $grey-05;
-        }
-    }
-}
-
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
 main {
     &.restau-01 {
@@ -330,6 +316,23 @@ main {
     }
 }
 
+.header__menu {
+    .logo-site {
+        justify-content: center;
+        margin: auto;
+    }
+    .__back {
+        text-decoration: none;
+        align-content: center;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 0;
+        .fa-solid.fa-arrow-left {
+            color: $grey-05;
+        }
+    }
+}
+
 .section.__menu {
     display: flex;
     flex-direction: column;
@@ -341,7 +344,7 @@ main {
     .__title {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-left: 10px;
         .__menu {
             font-family: Shrikhand;
@@ -376,6 +379,7 @@ main {
                 padding: 5px;
                 white-space: nowrap;
                 overflow: hidden;
+                text-overflow:ellipsis;
             }
             .__display-price {
                 display:block;
@@ -390,16 +394,18 @@ main {
             }
             &:hover {
                 .__display-text {
-                    width: 80%;
+                    min-width: 60%;
+                }
+                .__display-price {
+                    min-width: 5%;
                 }
                .cta.--menu {
-                    opacity: 100%;  
-                    display: flex;                
-                    width: 20%;
+                    opacity: 100%;                
+                    min-width: 15%;
+                    display: flex;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
                     margin-left: 10px;
-                    display: flex;
                     justify-content: center;
                     align-content: center;
                     background-color: $tertiary-color;
@@ -429,9 +435,5 @@ main {
                 }
             }
         }
-    }
-    .btn.__order {
-        width: 60%;
-        align-self: center;
     }
 }
