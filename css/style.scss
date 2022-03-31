@@ -31,7 +31,7 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 /* MIXINS > CARDS */
 @mixin textcard {
     box-sizing: border-box;
-    width: 100%;
+    width: 360px;
     height: 60px;
     padding: 5px;
     padding-left: 10px;
@@ -55,7 +55,6 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
     font-size: 14px;
     font-weight: bold;
 }
-
 
 
 /* ********** GÉNÉRAL ********** */
@@ -120,8 +119,9 @@ body {
     color: white;
     padding: 15px;
     border-radius: 50px;
-    .__order {
-        width: 120px;
+    &.__order {
+        width: 50%;
+        align-self: center;
     }
     &:hover {
         cursor: pointer;
@@ -129,7 +129,6 @@ body {
     @include small-bold; 
     @include border;
 }
-
 
 /* *** GÉNÉRAL > ÉLÉMENTS > CHECKBOXES *** */
 /* LIKE */
@@ -175,7 +174,7 @@ header {
 
 footer {
     padding: 30px;
-    background-color: $grey-04;
+    background-color: $grey-05;
     .title.__footer, .link.__footer {
         color: white;
         text-decoration: none;
@@ -298,19 +297,24 @@ footer {
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
 .header__menu {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    .logo-site {
+        justify-content: center;
+        margin: auto;
+    }
     .__back {
         text-decoration: none;
+        align-content: center;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 0;
         .fa-solid.fa-arrow-left {
-            display: block;
             color: $grey-05;
         }
     }
 }
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
+/* BACKGROUND IMAGES */
 main {
     &.restau-01 {
     background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
@@ -330,6 +334,7 @@ main {
     }
 }
 
+/* CONTENU DE LA SECTION */
 .section.__menu {
     display: flex;
     flex-direction: column;
@@ -341,7 +346,7 @@ main {
     .__title {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
         margin-left: 10px;
         .__menu {
             font-family: Shrikhand;
@@ -352,7 +357,7 @@ main {
         }
     }
     .__entrees, .__plats, .__desserts {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         .subtitle.--big-letters {
             text-transform: uppercase;
             font-weight: lighter;
@@ -368,6 +373,7 @@ main {
             @include textcard;
             @include top-corners;
             padding: 0;
+            padding-left: 10px;
             display: flex;
             flex-direction: row;
             .__display-text {
@@ -376,6 +382,7 @@ main {
                 padding: 5px;
                 white-space: nowrap;
                 overflow: hidden;
+                text-overflow:ellipsis;
             }
             .__display-price {
                 display:block;
@@ -390,16 +397,19 @@ main {
             }
             &:hover {
                 .__display-text {
-                    width: 80%;
+                    width: 70%;
+                    margin-right: 15px;
+                }
+                .__display-price {
+                    min-width: 5%;
                 }
                .cta.--menu {
-                    opacity: 100%;  
-                    display: flex;                
-                    width: 20%;
+                    opacity: 100%;                
+                    min-width: 15%;
+                    display: flex;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
                     margin-left: 10px;
-                    display: flex;
                     justify-content: center;
                     align-content: center;
                     background-color: $tertiary-color;
@@ -429,9 +439,5 @@ main {
                 }
             }
         }
-    }
-    .btn.__order {
-        width: 60%;
-        align-self: center;
     }
 }
