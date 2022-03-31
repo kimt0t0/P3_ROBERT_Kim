@@ -31,7 +31,7 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 /* MIXINS > CARDS */
 @mixin textcard {
     box-sizing: border-box;
-    width: 100%;
+    width: 360px;
     height: 60px;
     padding: 5px;
     padding-left: 10px;
@@ -296,7 +296,25 @@ footer {
 /* ***** SPÉCIFIQUE > PAGES RESTAURANTS ***** */
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > HEADER *** */
+.header__menu {
+    .logo-site {
+        justify-content: center;
+        margin: auto;
+    }
+    .__back {
+        text-decoration: none;
+        align-content: center;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 0;
+        .fa-solid.fa-arrow-left {
+            color: $grey-05;
+        }
+    }
+}
+
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
+/* BACKGROUND IMAGES */
 main {
     &.restau-01 {
     background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
@@ -316,23 +334,7 @@ main {
     }
 }
 
-.header__menu {
-    .logo-site {
-        justify-content: center;
-        margin: auto;
-    }
-    .__back {
-        text-decoration: none;
-        align-content: center;
-        margin: auto;
-        margin-left: 20px;
-        margin-right: 0;
-        .fa-solid.fa-arrow-left {
-            color: $grey-05;
-        }
-    }
-}
-
+/* CONTENU DE LA SECTION */
 .section.__menu {
     display: flex;
     flex-direction: column;
@@ -355,7 +357,7 @@ main {
         }
     }
     .__entrees, .__plats, .__desserts {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         .subtitle.--big-letters {
             text-transform: uppercase;
             font-weight: lighter;
@@ -371,6 +373,7 @@ main {
             @include textcard;
             @include top-corners;
             padding: 0;
+            padding-left: 10px;
             display: flex;
             flex-direction: row;
             .__display-text {
@@ -394,7 +397,8 @@ main {
             }
             &:hover {
                 .__display-text {
-                    min-width: 60%;
+                    width: 70%;
+                    margin-right: 15px;
                 }
                 .__display-price {
                     min-width: 5%;
