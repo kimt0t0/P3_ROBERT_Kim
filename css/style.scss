@@ -13,13 +13,13 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 /* ***** MIXINS ***** */
 /* MIXINS > ANGLES */
 @mixin top-corners {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 @mixin bottom-corners {
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
 /* MIXINS > BORDURES */
@@ -31,7 +31,7 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 /* MIXINS > CARDS */
 @mixin textcard {
     box-sizing: border-box;
-    width: 95%;
+    width: 330px;
     height: 60px;
     padding: 5px;
     padding-left: 10px;
@@ -120,8 +120,10 @@ body {
     padding: 15px;
     border-radius: 50px;
     &.__order {
+        display: grid;
         width: 50%;
         align-self: center;
+        margin: auto;
     }
     &:hover {
         cursor: pointer;
@@ -134,12 +136,10 @@ body {
 /* LIKE */
 .cta.__like {
     .__input {
+        cursor: pointer;
         position: absolute;
         opacity: 0;
-        &:hover {
-            cursor: pointer;
-        }
-        &:checked + .__icone {
+        &:hover + .__icone, &:checked + .__icone {
             .--unchecked {
                 display: none;
             }
@@ -192,10 +192,6 @@ footer {
     }
 }
 
-
-
-
-
 /* ********** SPÉCIFIQUE ********** */
 
 /* ***** SPÉCIFIQUE > INDEX ***** */
@@ -220,7 +216,7 @@ footer {
         }
     }
     &.__fonctionnement, &.__restaurants {
-        padding: 30px;
+        padding: 15px;
     }
     &.__fonctionnement {
         .__liste {
@@ -241,7 +237,7 @@ footer {
                     counter-increment: section;
                     content: counter(section);
                     position: absolute;
-                    left: 1em;
+                    left: 0.4em;
                     border-radius: 50%;
                     padding: 3px 7px 3px 7px;
                     display: inline;
@@ -273,7 +269,7 @@ footer {
             }
             .link.__card-index {
                 .cardimg {
-                    width: 95%;
+                    width: 330px;
                     height: 190px;
                     @include top-corners;
                 }
@@ -314,7 +310,7 @@ footer {
 }
 
 /* *** SPÉCIFIQUE > PAGES RESTAURANTS > MAIN *** */
-/* BACKGROUND IMAGES */
+/* SPÉCIFIQUE > PAGES RESTAURANTS > MAIN > BACKGROUND IMAGES */
 main {
     &.restau-01 {
     background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
@@ -334,7 +330,7 @@ main {
     }
 }
 
-/* CONTENU DE LA SECTION */
+/* SPÉCIFIQUE > PAGES RESTAURANTS > MAIN > CONTENU DE LA SECTION */
 .section.__menu {
     display: flex;
     flex-direction: column;
@@ -356,88 +352,98 @@ main {
             margin: auto;
         }
     }
-    .__entrees, .__plats, .__desserts {
-        margin-bottom: 20px;
-        .subtitle.--big-letters {
-            text-transform: uppercase;
-            font-weight: lighter;
-            font-size: 14px;
-            &::after {
+    .form.__menu {
+        .__entrees, .__plats, .__desserts {
+            border: none;
+            margin-bottom: 20px;
+            .subtitle.--big-letters {
+                text-transform: uppercase;
+                font-weight: lighter;
+                font-size: 14px;
+                &::after {
+                    display: flex;
+                    content: "";
+                    width: 8%;
+                    border-bottom: 3px #99E2D0 solid;
+                }
+            }
+            .__textcard {
+                @include textcard;
+                @include top-corners;
+                padding: 0;
+                padding-left: 10px;
                 display: flex;
-                content: "";
-                width: 12%;
-                border-bottom: 3px #99E2D0 solid;
-            }
-        }
-        .__textcard {
-            @include textcard;
-            @include top-corners;
-            padding: 0;
-            padding-left: 10px;
-            display: flex;
-            flex-direction: row;
-            .__display-text {
-                width: 100%;
                 flex-direction: row;
-                padding: 5px;
-                white-space: nowrap;
                 overflow: hidden;
-                text-overflow:ellipsis;
-            }
-            .__display-price {
-                display:block;
-                align-self: flex-end;
-                padding: 10px;
-                padding-right: 10px;
-                @include small-bold;
-            }
-            .cta.--menu {
-                width: 0%;
-                opacity: 0;
-            }
-            &:hover {
                 .__display-text {
-                    width: 70%;
-                    margin-right: 15px;
+                    width: 100%;
+                    flex-direction: row;
+                    padding: 5px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
                 }
                 .__display-price {
-                    min-width: 5%;
+                    display: block;
+                    align-self: flex-end;
+                    padding: 10px;
+                    @include small-bold;
                 }
-               .cta.--menu {
-                    opacity: 100%;                
-                    min-width: 15%;
-                    display: flex;
-                    border-top-right-radius: 20px;
-                    border-bottom-right-radius: 20px;
-                    margin-left: 10px;
-                    justify-content: center;
-                    align-content: center;
-                    background-color: $tertiary-color;
-                    color: white;
-                    &:hover {
-                        cursor: pointer;
+                .__input.--menu, .__icone.--menu {
+                    opacity: 0;
+                    position: absolute;
+                    left: 9999px;
+                }
+                &:hover {
+                    .__display-text {
+                        width: 70%;
+                        margin-right: 15px;
+                    }
+                    .__display-price {
+                        width: 5%;
                     }
                     .__input.--menu {
                         opacity: 0%;
-                        position: absolute;
-                        margin: auto;
-                        margin-top: 20px;
-                        &:hover {
-                            cursor: pointer;
+                        left: 60px;
+                        width: 65px;
+                        cursor: pointer;
+                        &:checked + .__icone.--menu {
+                            opacity: 100%;
+                            left: 0;
+                            width: 25%;
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            margin-left: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $tertiary-color;
+                            color: white;
                         }
                     }
                     .__icone.--menu {
-                        align-self: center;
-                        margin: auto;
+                        opacity: 100%;
+                        position: relative;
+                        left: 0;
+                        width: 25%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        margin-left: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $tertiary-color;
+                        color: white;
                         &:hover {
                             cursor: pointer;
                         }
-                    }
-                    .--checked.--menu {
-                        display: block;
+                        .--checked.--menu {
+                            display: block;
+                        }
                     }
                 }
             }
         }
     }
+    
 }
