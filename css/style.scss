@@ -31,7 +31,7 @@ $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 /* MIXINS > CARDS */
 @mixin textcard {
     box-sizing: border-box;
-    width: 360px;
+    width: 95%;
     height: 60px;
     padding: 5px;
     padding-left: 10px;
@@ -273,7 +273,7 @@ footer {
             }
             .link.__card-index {
                 .cardimg {
-                    width: 100%;
+                    width: 95%;
                     height: 190px;
                     @include top-corners;
                 }
