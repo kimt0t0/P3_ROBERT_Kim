@@ -150,6 +150,8 @@ body {
         }
     }
     .__icone {
+        font-size: 22px;
+        font-weight: lighter;
         .--unchecked {
             display: block;
         }
@@ -379,9 +381,6 @@ main {
                     width: 100%;
                     flex-direction: row;
                     padding: 5px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow:ellipsis;
                 }
                 .__display-price {
                     display: block;
@@ -396,8 +395,10 @@ main {
                 }
                 &:hover {
                     .__display-text {
-                        width: 70%;
-                        margin-right: 15px;
+                        width: 80%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
                     }
                     .__display-price {
                         width: 5%;
@@ -410,7 +411,7 @@ main {
                         &:checked + .__icone.--menu {
                             opacity: 100%;
                             left: 0;
-                            width: 25%;
+                            width: 20%;
                             border-top-right-radius: 15px;
                             border-bottom-right-radius: 15px;
                             margin-left: 10px;
@@ -425,7 +426,7 @@ main {
                         opacity: 100%;
                         position: relative;
                         left: 0;
-                        width: 25%;
+                        width: 20%;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
                         margin-left: 10px;
