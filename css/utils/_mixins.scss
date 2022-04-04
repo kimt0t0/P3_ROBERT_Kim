@@ -1,0 +1,44 @@
+/* MIXINS > ANGLES */
+@mixin top-corners {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+@mixin bottom-corners {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* MIXINS > BORDURES */
+@mixin border {
+    border: 0px solid transparent;
+    box-shadow: 5px 5px 5px $grey-03;
+}
+
+/* MIXINS > CARDS */
+@mixin textcard {
+    box-sizing: border-box;
+    width: 330px;
+    height: 60px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    @include bottom-corners;
+    @include border;
+    h2, p {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 14px;
+        line-height: 0.5;
+    }
+}
+
+
+/* MIXINS > TEXTES */
+@mixin small-bold {
+    font-size: 14px;
+    font-weight: bold;
+}

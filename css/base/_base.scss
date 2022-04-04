@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/roboto/Roboto-Regular.ttf'),
+    url('fonts/roboto/Roboto-Black.ttf'),
+    url('fonts/roboto/Roboto-BlackItalic.ttf'),
+    url('fonts/roboto/Roboto-Bold.ttf'),
+    url('fonts/roboto/Roboto-BoldItalic.ttf'),
+    url('fonts/roboto/Roboto-Italic.ttf'),
+    url('fonts/roboto/Roboto-Light.ttf'),
+    url('fonts/roboto/Roboto-LightItalic.ttf'),
+    url('fonts/roboto/Roboto-Medium.ttf'),
+    url('fonts/roboto/Roboto-MediumItalic.ttf'),
+    url('fonts/roboto/Roboto-Regular.ttf'),
+    url('fonts/roboto/Roboto-Thin.ttf'),
+    url('fonts/roboto/Roboto-ThinItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('fonts/shrikhand.otf');
+}
+
+body {
+    font-family: Roboto, Arial, Verdana, sans-serif;
+    counter-reset: section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    flex-wrap: wrap;
+    white-space: normal;
+    margin: auto;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p, nav {
+        font-size: 18px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+}

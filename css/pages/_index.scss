@@ -1,0 +1,91 @@
+.section {
+    padding-bottom: 50px;
+    &.__infoposition {
+        background-color: $grey-01;
+        text-align: center;
+        .form.__infoposition {
+            .input__infoposition {
+                width: 100%;
+                padding: 10px;
+                background-color: $grey-02;
+                border: none;
+                box-shadow: 0 2px 5px $grey-04 inset;
+                @include small-bold;
+            }
+            .fieldset__infoposition {
+                border: none;
+                padding: 20px;
+            }
+        }
+    }
+    &.__fonctionnement, &.__restaurants {
+        padding: 15px;
+    }
+    &.__fonctionnement {
+        .__liste {
+            margin: 0;
+            padding: 0;
+            .guidelines {
+                width: 80%;
+                background-color: $grey-01;
+                display: flex;
+                justify-content: space-evenly;
+                align-content: center;
+                padding: 20px 40px 20px 0px;
+                margin-bottom: 15px;
+                @include top-corners;
+                @include bottom-corners;
+                @include border;
+                &::before {
+                    counter-increment: section;
+                    content: counter(section);
+                    position: absolute;
+                    left: 0.4em;
+                    border-radius: 50%;
+                    padding: 3px 7px 3px 7px;
+                    display: inline;
+                    text-align: center;
+                    color: white;
+                    background-color: $primary-color;
+                }
+                .__icone {
+                    color: $grey-04;
+                    padding-top: 2px;
+                }
+                &:hover {
+                    background-color: lighten($primary-color, 35%);
+                    cursor: pointer;
+                    .__icone {
+                        color: $primary-color;
+                    }
+                }
+            }   
+        }
+    }
+    &.__restaurants {
+        background-color: $grey-01;
+        &.card {
+            @include textcard;
+            @include top-corners;
+            @include border;
+            height: 250px;
+            }
+            .link.__card-index {
+                .cardimg {
+                    width: 330px;
+                    height: 190px;
+                    @include top-corners;
+                }
+            }
+            .textcard {
+                @include textcard;
+                .cta {
+                    float: right;
+                    position: relative;
+                    margin-top: -40px;
+                    padding-right: 10px;
+                    color: black;
+                }
+            }
+        }
+    }

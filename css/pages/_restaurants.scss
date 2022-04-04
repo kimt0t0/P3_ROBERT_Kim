@@ -1,0 +1,154 @@
+/* *** PAGES > RESTAURANTS > HEADER *** */
+.header__menu {
+    .logo-site {
+        justify-content: center;
+        margin: auto;
+    }
+    .__back {
+        text-decoration: none;
+        align-content: center;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 0;
+        .fa-solid.fa-arrow-left {
+            color: $grey-05;
+        }
+    }
+}
+
+/* PAGES > RESTAURANTS > MAIN > BACKGROUND IMAGES */
+main {
+    &.restau-01 {
+    background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
+    background-size: 400px;
+    }
+    &.restau-02 {
+        background: url("../images/restaurants/la-note-enchantee.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-03 {
+        background: url("../images/restaurants/a-la-francaise.jpg") no-repeat;
+        background-size: 400px;
+    }
+    &.restau-04 {
+        background: url("../images/restaurants/le-delice-des-sens.jpg") no-repeat;
+        background-size: 400px;
+    }
+}
+
+/* PAGES > RESTAURANTS > MAIN */
+.section.__menu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-top: 250px;
+    padding: 10px 10px 40px 10px;
+    @include top-corners();
+    background-color: $grey-01;
+    .__title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 10px;
+        .__menu {
+            font-family: Shrikhand;
+        }
+        .cta {
+            align-content: center;
+            margin: auto;
+        }
+    }
+    .form.__menu {
+        .__entrees, .__plats, .__desserts {
+            border: none;
+            margin-bottom: 20px;
+            .subtitle.--big-letters {
+                text-transform: uppercase;
+                font-weight: lighter;
+                font-size: 14px;
+                &::after {
+                    display: flex;
+                    content: "";
+                    width: 8%;
+                    border-bottom: 3px #99E2D0 solid;
+                }
+            }
+            .__textcard {
+                @include textcard;
+                @include top-corners;
+                padding: 0;
+                padding-left: 10px;
+                display: flex;
+                flex-direction: row;
+                overflow: hidden;
+                .__display-text {
+                    width: 100%;
+                    flex-direction: row;
+                    padding: 5px;
+                }
+                .__display-price {
+                    display: block;
+                    align-self: flex-end;
+                    padding: 10px;
+                    @include small-bold;
+                }
+                .__input.--menu, .__icone.--menu {
+                    opacity: 0;
+                    position: absolute;
+                    left: 9999px;
+                }
+                &:hover {
+                    .__display-text {
+                        width: 80%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                    }
+                    .__display-price {
+                        width: 5%;
+                    }
+                    .__input.--menu {
+                        opacity: 0%;
+                        left: 60px;
+                        width: 65px;
+                        cursor: pointer;
+                        &:checked + .__icone.--menu {
+                            opacity: 100%;
+                            left: 0;
+                            width: 20%;
+                            border-top-right-radius: 15px;
+                            border-bottom-right-radius: 15px;
+                            margin-left: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $tertiary-color;
+                            color: white;
+                        }
+                    }
+                    .__icone.--menu {
+                        opacity: 100%;
+                        position: relative;
+                        left: 0;
+                        width: 20%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        margin-left: 10px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $tertiary-color;
+                        color: white;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                        .--checked.--menu {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

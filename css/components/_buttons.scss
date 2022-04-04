@@ -1,0 +1,46 @@
+/* *** ÉLÉMENTS > BOUTON BASE *** */
+.btn {
+    background: $gradient-01;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    &.__order {
+        display: grid;
+        width: 50%;
+        align-self: center;
+        margin: auto;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+    @include small-bold; 
+    @include border;
+}
+
+/* *** ÉLÉMENTS > COEUR LIKE *** */
+.cta.__like {
+    .__input {
+        cursor: pointer;
+        position: absolute;
+        opacity: 0;
+        &:hover + .__icone, &:checked + .__icone {
+            .--unchecked {
+                display: none;
+            }
+            .--checked {
+                display: block;
+                color: $primary-color;
+            }
+        }
+    }
+    .__icone {
+        font-size: 22px;
+        font-weight: lighter;
+        .--unchecked {
+            display: block;
+        }
+        .--checked {
+            display: none;
+        }
+    }
+}

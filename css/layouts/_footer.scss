@@ -1,0 +1,19 @@
+footer {
+    padding: 30px;
+    background-color: $grey-05;
+    .title.__footer, .link.__footer {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+    .title.__footer {
+        font-family: Shrikhand;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .menu-nav {
+        .list-style.__footer {
+            list-style: none;
+        }
+    }
+}
