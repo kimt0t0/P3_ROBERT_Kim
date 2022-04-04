@@ -40,9 +40,10 @@ main {
 .section.__menu {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: stretch;
+    margin-left: 0;
     margin-top: 250px;
-    padding: 10px 10px 40px 10px;
+    padding: 10px 2px 50px 2px;
     @include top-corners();
     background-color: $grey-01;
     .__title {
@@ -53,7 +54,7 @@ main {
         .__menu {
             font-family: Shrikhand;
         }
-        .cta {
+        .cta.__like {
             align-content: center;
             margin: auto;
         }
@@ -66,30 +67,28 @@ main {
                 text-transform: uppercase;
                 font-weight: lighter;
                 font-size: 14px;
+                line-height: 2;
                 &::after {
                     display: flex;
                     content: "";
-                    width: 8%;
+                    width: 10%;
                     border-bottom: 3px #99E2D0 solid;
                 }
             }
             .__textcard {
                 @include textcard;
                 @include top-corners;
-                padding: 0;
-                padding-left: 10px;
                 display: flex;
                 flex-direction: row;
-                overflow: hidden;
                 .__display-text {
                     width: 100%;
                     flex-direction: row;
-                    padding: 5px;
+                    padding: 1.5%;
                 }
                 .__display-price {
                     display: block;
                     align-self: flex-end;
-                    padding: 10px;
+                    padding: 3%;
                     @include small-bold;
                 }
                 .__input.--menu, .__icone.--menu {
@@ -102,38 +101,22 @@ main {
                         width: 80%;
                         white-space: nowrap;
                         overflow: hidden;
-                        text-overflow:ellipsis;
-                    }
-                    .__display-price {
-                        width: 5%;
+                        text-overflow: ellipsis;
                     }
                     .__input.--menu {
-                        opacity: 0%;
-                        left: 60px;
-                        width: 65px;
+                        left: 70%;
+                        opacity: 00%;
+                        width: 120px;
                         cursor: pointer;
-                        &:checked + .__icone.--menu {
-                            opacity: 100%;
-                            left: 0;
-                            width: 20%;
-                            border-top-right-radius: 15px;
-                            border-bottom-right-radius: 15px;
-                            margin-left: 10px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: $tertiary-color;
-                            color: white;
-                        }
                     }
                     .__icone.--menu {
                         opacity: 100%;
                         position: relative;
                         left: 0;
-                        width: 20%;
+                        width: 15%;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
-                        margin-left: 10px;
+                        margin-left: 2%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
