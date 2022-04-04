@@ -22,6 +22,10 @@
         padding: 15px;
     }
     &.__fonctionnement {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
         .__liste {
             margin: 0;
             padding: 0;
@@ -29,9 +33,10 @@
                 width: 80%;
                 background-color: $grey-01;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 align-content: center;
-                padding: 20px 40px 20px 0px;
+                padding: 6% 2% 5% 5%;
+                margin-left: 5%;
                 margin-bottom: 15px;
                 @include top-corners;
                 @include bottom-corners;
@@ -39,8 +44,8 @@
                 &::before {
                     counter-increment: section;
                     content: counter(section);
-                    position: absolute;
-                    left: 0.4em;
+                    position: relative;
+                    left: -10%;
                     border-radius: 50%;
                     padding: 3px 7px 3px 7px;
                     display: inline;
@@ -49,7 +54,9 @@
                     background-color: $primary-color;
                 }
                 .__icone {
+                    font-size: 18px;
                     color: $grey-04;
+                    padding-right: 10%;
                     padding-top: 2px;
                 }
                 &:hover {
@@ -72,7 +79,7 @@
             }
             .link.__card-index {
                 .cardimg {
-                    width: 330px;
+                    width: 100%;
                     height: 190px;
                     @include top-corners;
                 }
