@@ -1,0 +1,21 @@
+.aside-card.__new {
+    box-sizing: border-box;
+    width: 20%;
+    height: 3%;
+    text-align: center;
+    padding: 2%;
+    border-radius: 5%;
+    background-color: $tertiary-color;
+    color: darken($tertiary-color, 35%);
+    z-index: 2;
+    position: absolute;
+    @include small-bold;
+    &.--01 {
+        bottom: 5%;
+        left: 72%;
+    }
+    &.--02 {
+        bottom: -25%;
+        left: 72%;
+    }
+}
