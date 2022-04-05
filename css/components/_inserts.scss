@@ -3,7 +3,7 @@
     width: 20%;
     height: 3%;
     text-align: center;
-    padding: 2%;
+    padding: 1.5%;
     border-radius: 5%;
     background-color: $tertiary-color;
     color: darken($tertiary-color, 35%);
@@ -11,11 +11,11 @@
     position: absolute;
     @include small-bold;
     &.--01 {
-        bottom: 5%;
+        bottom: -11%;
         left: 72%;
     }
     &.--02 {
-        bottom: -25%;
+        bottom: -48%;
         left: 72%;
     }
 }

@@ -81,13 +81,18 @@ main {
                 display: flex;
                 flex-direction: row;
                 .__display-text {
-                    width: 100%;
-                    flex-direction: row;
-                    padding: 1.5%;
+                    width: 85%;
+                    h2, p {
+                        line-height: 1;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis; /* ne fonctionne pas! */
+                    }
                 }
                 .__display-price {
                     display: block;
                     align-self: flex-end;
+                    width: 5%;
                     padding: 3%;
                     @include small-bold;
                 }
@@ -98,10 +103,8 @@ main {
                 }
                 &:hover {
                     .__display-text {
-                        width: 80%;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
+                        min-width: 40%;
+                        max-width: 80%;
                     }
                     .__input.--menu {
                         left: 70%;
@@ -113,7 +116,7 @@ main {
                         opacity: 100%;
                         position: relative;
                         left: 0;
-                        width: 15%;
+                        min-width: 18%;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
                         margin-left: 2%;

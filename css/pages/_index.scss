@@ -4,13 +4,25 @@
         background-color: $grey-01;
         text-align: center;
         .form.__infoposition {
-            .input__infoposition {
+            .__head-display {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                color: $grey-05;
                 width: 100%;
                 padding: 10px;
                 background-color: $grey-02;
                 border: none;
                 box-shadow: 0 2px 5px $grey-04 inset;
-                @include small-bold;
+                .label__infoposition {
+                    font-size: 18px;
+                    margin-right: 3%;
+                }
+                .input__infoposition {
+                    background-color: $grey-02;
+                    border: none;
+                    @include small-bold;
+                }
             }
             .fieldset__infoposition {
                 border: none;
@@ -86,10 +98,12 @@
             }
             .textcard {
                 @include textcard;
+                padding: 5px;
+                padding-left: 10px;
                 .cta {
                     float: right;
                     position: relative;
-                    margin-top: -40px;
+                    margin-top: -43px;
                     padding-right: 10px;
                     color: black;
                 }
