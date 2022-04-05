@@ -6,4 +6,20 @@ header {
         height: 40%;
         padding: 20px;
     }
+    @include desktop-query {
+        justify-content: flex-start;
+        .logo-site {
+            width: 15%;
+            height: 15%;
+            margin-bottom: 7%;
+        }
+    }
+    @include tablet {
+        justify-content: flex-start;
+        .logo-site {
+            width: 15%;
+            height: 15%;
+            margin-bottom: 7%;
+        }
+    }
 }

@@ -3,12 +3,16 @@
     &.__infoposition {
         background-color: $grey-01;
         text-align: center;
+        @include desktop-query {
+            width: 20%;
+            margin: 0;
+        }
         .form.__infoposition {
             .__head-display {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                width: 100%;
+                width: 93.5%;
                 padding: 10px;
                 margin: 0;
                 border: none;
@@ -17,7 +21,7 @@
                 box-shadow: 0 2px 5px $grey-04 inset;
                 .label__infoposition {
                     font-size: 18px;
-                    margin-right: 3%;
+                    padding-right: 3%;
                 }
                 .input__infoposition {
                     background-color: $grey-02;
@@ -38,7 +42,10 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: auto;
+        margin: auto;@include desktop-query {
+            width: 30%;
+            margin: 0;
+        }
         .__liste {
             margin: 0;
             padding: 0;

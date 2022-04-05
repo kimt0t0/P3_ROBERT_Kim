@@ -32,9 +32,21 @@ body {
     margin: auto;
     @include desktop-query {
         align-content: initial;
+        main {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: space-between;
+            flex: wrap;
+        }
     }
     @include tablet {
         align-content: initial;
+        main {
+            flex-direction: row;
+            justify-content: flex-start;
+            align-content: space-between;
+            flex: wrap;
+        }
     }
 
     h1 {
