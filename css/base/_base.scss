@@ -30,6 +30,12 @@ body {
     flex-wrap: wrap;
     white-space: normal;
     margin: auto;
+    @include desktop-query {
+        align-content: initial;
+    }
+    @include tablet {
+        align-content: initial;
+    }
 
     h1 {
         font-size: 24px;

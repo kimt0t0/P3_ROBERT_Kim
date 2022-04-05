@@ -43,3 +43,17 @@
     font-size: 12px;
     font-weight: bold;
 }
+
+
+/* MIXINS > MEDIA QUERIES */
+@mixin desktop-query {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
