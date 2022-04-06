@@ -1,14 +1,24 @@
+/* chemins depuis HTML restaurants */
+$img-restau-01: "../images/restaurants/la-palette-du-gout.jpg";
+$img-restau-02: "../images/restaurants/la-note-enchantee.jpg";
+$img-restau-03: "../images/restaurants/a-la-francaise.jpg";
+$img-restau-04: "../images/restaurants/le-delice-des-sens.jpg";
+
+/* COULEURS */
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-01: #F6F6F6;
 $grey-02: darken($grey-01, 5%);
-$grey-03: darken($grey-01, 7%);
+$grey-03: darken($grey-01, 10%);
 $grey-04: darken($grey-01, 50%);
 $grey-05: darken($grey-01, 75%);
+
+/* DÉGRADÉS */
 $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
 $gradient-02: linear-gradient(to top left, lighten($primary-color, 5%), lighten($secondary-color, 5%));
 
+/* BREAKPOINTS MEDIA QUERIES */
 $breakpoints: (
     tablet: 768px,
     desktop: 992px

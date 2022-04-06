@@ -3,6 +3,10 @@
     .logo-site {
         justify-content: center;
         margin: auto;
+        @include desktop-query {
+            align-content: center;
+            margin: 0 0 3% 0;
+        }
     }
     .__back {
         text-decoration: none;
@@ -10,6 +14,10 @@
         margin: auto;
         margin-left: 20px;
         margin-right: 0;
+        @include desktop-query {
+            align-self: center;
+            margin: 3% 2% 2% 2%;
+        }
         .fa-solid.fa-arrow-left {
             color: $grey-05;
         }
@@ -19,20 +27,25 @@
 /* PAGES > RESTAURANTS > MAIN > BACKGROUND IMAGES */
 main {
     &.restau-01 {
-    background: url("../images/restaurants/la-palette-du-gout.jpg") no-repeat;
-    background-size: 400px;
+        background: url($img-restau-01) no-repeat;
+        background-size: 400px;
     }
     &.restau-02 {
-        background: url("../images/restaurants/la-note-enchantee.jpg") no-repeat;
+        background: url($img-restau-02) no-repeat;
         background-size: 400px;
     }
     &.restau-03 {
-        background: url("../images/restaurants/a-la-francaise.jpg") no-repeat;
+        background: url($img-restau-03) no-repeat;
         background-size: 400px;
     }
     &.restau-04 {
-        background: url("../images/restaurants/le-delice-des-sens.jpg") no-repeat;
+        background: url($img-restau-04) no-repeat;
         background-size: 400px;
+    }
+    @include desktop-query {
+        &.restau-01, &.restau-02, &.restau-03, &.restau-03 {
+            background: transparent;
+        }
     }
 }
 
@@ -44,13 +57,22 @@ main {
     margin-left: 0;
     margin-top: 250px;
     padding: 10px 2px 50px 2px;
-    @include top-corners();
     background-color: $grey-01;
+    @include top-corners();
+    @include desktop-query {
+        margin-top: 0;
+    }
     .__title {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         margin-left: 10px;
+        @include desktop-query {
+            width: 25%;
+            margin-left: 2%;
+            flex-wrap: wrap;
+            white-space: normal;
+        }
         .__menu {
             font-family: Shrikhand;
         }
@@ -60,9 +82,32 @@ main {
         }
     }
     .form.__menu {
+        @include desktop-query {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            white-space: normal;
+        }
+        .no-mobile.__restau-photo {
+            display: none;
+            @include desktop-query {
+                display: flex;
+                align-content: flex-start;
+                margin: auto;
+                margin-top: 3%;
+                width: 15%;
+                height: auto;
+                @include top-corners;
+                @include bottom-corners;
+                @include border($grey-03);
+            }
+        }
         .__entrees, .__plats, .__desserts {
             border: none;
             margin-bottom: 20px;
+            @include desktop-query {
+                width: 25%;
+            }
             .subtitle.--big-letters {
                 text-transform: uppercase;
                 font-weight: lighter;

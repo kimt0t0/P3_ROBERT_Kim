@@ -6,11 +6,17 @@
     border-radius: 50px;
     @include small-bold; 
     @include border($grey-03);
+    @include desktop-query {
+        font-size: 16px;
+    }
     &.__order {
         display: grid;
         width: 50%;
         align-self: center;
         margin: auto;
+        @include desktop-query {
+            width: 10%;
+        }
     }
     &:hover {
         cursor: pointer;
