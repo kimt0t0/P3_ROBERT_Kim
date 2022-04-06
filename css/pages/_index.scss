@@ -118,7 +118,7 @@
                 margin-bottom: 15px;
                 @include top-corners;
                 @include bottom-corners;
-                @include border;
+                @include border($grey-03);
                 @include desktop-query {
                     white-space: nowrap;
                     margin-left: 10%;
@@ -224,7 +224,7 @@
                 .card {
                     @include textcard;
                     @include top-corners;
-                    @include border;
+                    @include border($grey-03);
                     padding-left: 0;
                     width: 340px;
                     height: 250px;

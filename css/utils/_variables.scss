@@ -7,6 +7,7 @@ $grey-03: darken($grey-01, 7%);
 $grey-04: darken($grey-01, 50%);
 $grey-05: darken($grey-01, 75%);
 $gradient-01: linear-gradient(to top left, $primary-color, $secondary-color);
+$gradient-02: linear-gradient(to top left, lighten($primary-color, 5%), lighten($secondary-color, 5%));
 
 $breakpoints: (
     tablet: 768px,

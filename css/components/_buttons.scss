@@ -4,6 +4,8 @@
     color: white;
     padding: 15px;
     border-radius: 50px;
+    @include small-bold; 
+    @include border($grey-03);
     &.__order {
         display: grid;
         width: 50%;
@@ -12,9 +14,9 @@
     }
     &:hover {
         cursor: pointer;
+        background: $gradient-02;
+        @include border($grey-04);
     }
-    @include small-bold; 
-    @include border;
 }
 
 /* *** ÉLÉMENTS > COEUR LIKE *** */
@@ -36,6 +38,7 @@
     .__icone {
         font-size: 22px;
         font-weight: lighter;
+        transition: transform 400ms;
         .--unchecked {
             display: block;
         }

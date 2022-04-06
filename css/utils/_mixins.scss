@@ -10,9 +10,9 @@
 }
 
 /* MIXINS > BORDURES */
-@mixin border {
+@mixin border($color) {
     border: 0px solid transparent;
-    box-shadow: 5px 5px 5px $grey-03;
+    box-shadow: 5px 5px 5px $color;
 }
 
 /* MIXINS > CARDS */
@@ -26,7 +26,7 @@
     background-color: white;
     line-height: 1;
     @include bottom-corners;
-    @include border;
+    @include border($grey-03);
     h2, p {
         display: flex;
         flex-direction: column;
