@@ -168,16 +168,17 @@
             }
         }
         .carousel {
-            width: 95%;
-            height: 340px;
-            display: flex;
-            flex-direction: row;
-            justify-content: stretch;
-            white-space: nowrap;
-            flex-wrap: nowrap;
-            overflow: hidden;
-            background-color: $grey-01;
-            padding: 0;
+            @include desktop-query {
+                width: 95%;
+                height: 340px;
+                display: flex;
+                flex-direction: row;
+                justify-content: stretch;
+                white-space: nowrap;
+                flex-wrap: nowrap;
+                overflow: hidden;
+                background-color: $grey-01;
+                padding: 0;}
             .scroller  {
                 display: none;
                 @include desktop-query {
@@ -226,7 +227,7 @@
                     @include top-corners;
                     @include border($grey-03);
                     padding-left: 0;
-                    width: 340px;
+                    width: 90%;
                     height: 250px;
                     margin-bottom: 10%;
                     @include desktop-query {
