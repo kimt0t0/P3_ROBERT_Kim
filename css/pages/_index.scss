@@ -171,6 +171,7 @@
         .scroller  {
             display: none;
             @include desktop-query {
+                z-index: 2;
                 box-sizing: border-box;
                 width: 2.5%;
                 height: 340px;
@@ -201,6 +202,7 @@
         }
         .__display-articles {
             @include desktop-query {
+                z-index: 1;
                 box-sizing: border-box;
                 width: 90%;
                 height: 340px;
