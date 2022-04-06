@@ -7,6 +7,7 @@
     @include small-bold; 
     @include border($grey-03);
     @include desktop-query {
+        position: relative;
         font-size: 16px;
     }
     &.__order {
@@ -16,6 +17,10 @@
         margin: auto;
         @include desktop-query {
             width: 10%;
+            display: block;
+            position: absolute;
+            bottom: 6%;
+            right: 5%;
         }
     }
     &:hover {

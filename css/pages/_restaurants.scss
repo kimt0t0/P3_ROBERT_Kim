@@ -43,7 +43,7 @@ main {
         background-size: 400px;
     }
     @include desktop-query {
-        &.restau-01, &.restau-02, &.restau-03, &.restau-03 {
+        &.restau-01, &.restau-02, &.restau-03, &.restau-04 {
             background: transparent;
         }
     }
@@ -60,7 +60,8 @@ main {
     background-color: $grey-01;
     @include top-corners();
     @include desktop-query {
-        margin-top: 0;
+        margin: 0;
+        padding: 2% 0% 5% 0%;
     }
     .__title {
         display: flex;
