@@ -33,6 +33,7 @@ body {
     @include desktop-query {
         align-content: initial;
         main {
+            width: 100%;
             flex-direction: row;
             justify-content: flex-start;
             align-content: space-between;
@@ -42,6 +43,7 @@ body {
     @include tablet {
         align-content: initial;
         main {
+            width: 100%;
             flex-direction: row;
             justify-content: flex-start;
             align-content: space-between;

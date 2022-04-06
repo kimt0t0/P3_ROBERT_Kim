@@ -1,37 +1,85 @@
 .section {
     padding-bottom: 50px;
+    @include desktop-query {
+        padding-bottom: 0;
+        width: 100%;
+        height: 10%;
+    }
     &.__infoposition {
         background-color: $grey-01;
         text-align: center;
         @include desktop-query {
-            width: 20%;
-            margin: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            white-space: nowrap;
         }
         .form.__infoposition {
+            @include desktop-query {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
             .__head-display {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                width: 93.5%;
+                width: 100%;
                 padding: 10px;
                 margin: 0;
                 border: none;
                 background-color: $grey-02;
                 color: $grey-05;
                 box-shadow: 0 2px 5px $grey-04 inset;
+                @include desktop-query {
+                    width: 15%;
+                    padding: 0 2.2rem 0 0;
+                }
                 .label__infoposition {
                     font-size: 18px;
                     padding-right: 3%;
+                    @include desktop-query {
+                        text-align: center;
+                        margin: auto;
+                    }
                 }
                 .input__infoposition {
-                    background-color: $grey-02;
+                    color: $grey-05;
+                    background-color: transparent;
                     border: none;
                     @include small-bold;
+                    @include desktop-query {
+                        font-size: 14px;}
                 }
             }
             .fieldset__infoposition {
                 border: none;
                 padding: 20px;
+                @include desktop-query {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    text-align: center;
+                    margin: auto;
+                    width: 75%;
+                    h1 {
+                        font-size: 14px;
+                        line-height: 0;
+                        margin-right: 1.5rem;
+                    }
+                    p {
+                        font-size: 14px;
+                        line-height: 0;
+                        margin-right: 1.5rem;
+                    }
+                }
+            }
+            .btn {
+                @include desktop-query {
+                    background-color: white;
+                    font-size: 16px;
+                }
             }
         }
     }

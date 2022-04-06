@@ -5,13 +5,10 @@ header {
         width: 40%;
         height: 40%;
         padding: 20px;
-    }
-    @include desktop-query {
-        justify-content: flex-start;
-        .logo-site {
-            width: 15%;
-            height: 15%;
-            margin-bottom: 7%;
+        @include desktop-query {
+            width: 10;
+            height: 10%;
+            padding: 3rem 0 3rem 5rem;
         }
     }
     @include tablet {
