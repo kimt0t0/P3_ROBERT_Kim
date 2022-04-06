@@ -3,7 +3,7 @@
     @include desktop-query {
         width: 100%;
         padding-bottom: 0;
-        margin: 3% 0 3% 0;
+        margin: 2% 0 2% 0;
     }
     &.__infoposition {
         background-color: $grey-01;
@@ -156,29 +156,54 @@
     }
     &.__restaurants {
         background-color: $grey-01;
-        &.card {
+        @include desktop-query {
+            box-sizing: border-box;
+            width: 95%;
+            margin: 4% 2.5% 4% 2.5%;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        .card {
             @include textcard;
             @include top-corners;
             @include border;
             height: 250px;
+            @include desktop-query {
+                margin-right: 5%;
+            }
             }
             .link.__card-index {
                 .cardimg {
                     width: 100%;
                     height: 190px;
                     @include top-corners;
+                    @include desktop-query {
+                        width: 120%;
+                        height: 200px;
+                    }
                 }
             }
             .textcard {
                 @include textcard;
                 padding: 5px;
                 padding-left: 10px;
+                @include desktop-query {
+                    width: 120%;
+                }
                 .cta {
                     float: right;
                     position: relative;
                     margin-top: -43px;
                     padding-right: 10px;
                     color: black;
+                }
+            }
+            @include desktop-query {
+                h1 {
+                    position:absolute;
+                    bottom: 23%;
+                    left: 1%;
                 }
             }
         }
