@@ -27,20 +27,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-content: space-between;
+    margin: auto;
     flex-wrap: wrap;
     white-space: normal;
-    margin: auto;
     @include desktop-query {
-        align-content: initial;
-        main {
-            width: 100%;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-content: space-between;
-            flex: wrap;
-        }
-    }
-    @include tablet {
         align-content: initial;
         main {
             width: 100%;
