@@ -1,14 +1,15 @@
 .section {
     padding-bottom: 50px;
     @include desktop-query {
-        padding-bottom: 0;
         width: 100%;
-        height: 10%;
+        padding-bottom: 0;
+        margin: 3% 0 3% 0;
     }
     &.__infoposition {
         background-color: $grey-01;
         text-align: center;
         @include desktop-query {
+            height: 10%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -90,13 +91,21 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: auto;@include desktop-query {
-            width: 30%;
-            margin: 0;
+        margin: auto;
+        @include desktop-query {
+            height: 15%;
+            display: flex;
+            flex-direction: column; 
         }
         .__liste {
             margin: 0;
             padding: 0;
+            @include desktop-query {
+                width: 80%;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+            }
             .guidelines {
                 width: 80%;
                 background-color: $grey-01;
@@ -109,6 +118,11 @@
                 @include top-corners;
                 @include bottom-corners;
                 @include border;
+                @include desktop-query {
+                    white-space: nowrap;
+                    margin-left: 10%;
+                    padding: 2.2% 0% 2% 0%;
+                }
                 &::before {
                     counter-increment: section;
                     content: counter(section);
@@ -120,6 +134,9 @@
                     text-align: center;
                     color: white;
                     background-color: $primary-color;
+                    @include desktop-query {
+                        left: -5%;
+                    }
                 }
                 .__icone {
                     font-size: 18px;
