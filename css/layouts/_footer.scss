@@ -6,7 +6,7 @@ footer {
         flex-direction: row;
         justify-content: stretch;
         padding: 20px;
-        padding-left: 20%;
+        padding-left: 12%;
     }
     .title.__footer, .link.__footer {
         color: white;
@@ -18,7 +18,7 @@ footer {
         font-weight: bold;
         font-size: 18px;
         @include desktop-query {
-            margin-right: 3%;
+            margin-right: 12%;
         }
     }
     .menu-nav {
@@ -29,10 +29,10 @@ footer {
                 flex-direction: row;
                 justify-content: space-evenly;
                 .list-style.__footer {
-                    text-align: center;
+                    text-align: left;
                     width: 200px;
                     padding-top: 15px;
-                    margin-right: 3%;
+                    padding-right: 3rem;
                 }
             }
         }
