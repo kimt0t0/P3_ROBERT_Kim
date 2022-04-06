@@ -180,16 +180,22 @@
                 align-content: center;
                 color: $grey-05;
                 background-color: $grey-02;
+                transition: background-color 300ms ease-in-out;
+                border: none;
                 opacity: 70%;
                 .fa {
                     margin: auto;
                 }
                 &:hover {
                     cursor: pointer;
-                    /* léger mouvement */
+                    background-color: darken($grey-02, 20%);
+                    + .__display-articles {
+                        transform: translateX(-5%);
+                    }
                 }
                 &:focus {
-                    /* défilement des restaus */
+                    background-color: darken($grey-02, 30%);
+                    
                 }
             }
         }
@@ -205,6 +211,7 @@
                 white-space: nowrap;
                 flex-wrap: nowrap;
                 overflow: hidden;
+                transition: transform 400ms ease-out;
             }
             .card {
                 @include textcard;
@@ -213,6 +220,7 @@
                 height: 250px;
                 margin-bottom: 10%;
                 @include desktop-query {
+                    padding-left: 0;
                     margin: 2% 2.5% 2% 2.5%;
                 }
                 }
