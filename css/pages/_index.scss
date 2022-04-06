@@ -85,6 +85,7 @@
         }
     }
     &.__fonctionnement, &.__restaurants {
+        width: 100%;
         padding: 15px;
     }
     &.__fonctionnement {
@@ -159,97 +160,108 @@
         @include desktop-query {
             background-color: transparent;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
         }
         @include desktop-query {
             h1 {
-                position:absolute;
-                bottom: 24%;
-                left: 1%;
+                
             }
         }
-        .scroller  {
-            display: none;
-            @include desktop-query {
-                z-index: 2;
-                box-sizing: border-box;
-                width: 2.5%;
-                height: 340px;
-                margin-top: 2%;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                color: $grey-05;
-                background-color: $grey-02;
-                transition: background-color 300ms ease-in-out;
-                border: none;
-                opacity: 70%;
-                .fa {
-                    margin: auto;
-                }
-                &:hover {
-                    cursor: pointer;
-                    background-color: darken($grey-02, 20%);
-                    + .__display-articles {
-                        transform: translateX(-5%);
-                    }
-                }
-                &:focus {
-                    background-color: darken($grey-02, 30%);
-                    
-                }
-            }
-        }
-        .__display-articles {
-            @include desktop-query {
-                z-index: 1;
-                box-sizing: border-box;
-                width: 90%;
-                height: 340px;
-                margin-top: 2%;
-                background-color: $grey-01;
-                display: flex;
-                flex-direction: row;
-                white-space: nowrap;
-                flex-wrap: nowrap;
-                overflow: hidden;
-                transition: transform 400ms ease-out;
-            }
-            .card {
-                @include textcard;
-                @include top-corners;
-                @include border;
-                height: 250px;
-                margin-bottom: 10%;
+        .carousel {
+            width: 95%;
+            height: 340px;
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            white-space: nowrap;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            background-color: $grey-01;
+            padding: 0;
+            .scroller  {
+                display: none;
                 @include desktop-query {
-                    padding-left: 0;
-                    margin: 2% 2.5% 2% 2.5%;
-                }
-                }
-                .link.__card-index {
-                    .cardimg {
-                        width: 100%;
-                        height: 190px;
-                        @include top-corners;
-                        @include desktop-query {
-                            width: 120%;
-                            height: 200px;
+                    z-index: 2;
+                    box-sizing: border-box;
+                    width: 2.5%;
+                    height: 340px;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    color: $grey-05;
+                    background-color: $grey-02;
+                    transition: background-color 300ms ease-in-out;
+                    border: none;
+                    opacity: 70%;
+                    .fa {
+                        margin: auto;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background-color: darken($grey-02, 20%);
+                        + .__display-articles {
+                            transform: translateX(-5%);
                         }
                     }
-                }
-                .textcard {
-                    @include textcard;
-                    padding: 5px;
-                    padding-left: 10px;
-                    @include desktop-query {
-                        width: 120%;
+                    &:focus {
+                        background-color: darken($grey-02, 30%);
+                        
                     }
-                    .cta {
-                        float: right;
-                        position: relative;
-                        margin-top: -43px;
-                        padding-right: 10px;
-                        color: black;
+                }
+            }
+            .__display-articles {
+                @include desktop-query {
+                    z-index: 1;
+                    box-sizing: border-box;
+                    width: 95%;
+                    height: 340px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-content: center;
+                    transition: transform 400ms ease-out;
+                }
+                .card {
+                    @include textcard;
+                    @include top-corners;
+                    @include border;
+                    padding-left: 0;
+                    width: 340px;
+                    height: 250px;
+                    margin-bottom: 10%;
+                    @include desktop-query {
+                        margin: 2.3% 3% 2% 3%;
+                        transition: transform 400ms ease;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    }
+                    .link.__card-index {
+                        .cardimg {
+                            width: 100%;
+                            height: 190px;
+                            @include top-corners;
+                            @include desktop-query {
+                                width: 120%;
+                                height: 200px;
+                            }
+                        }
+                    }
+                    .textcard {
+                        @include textcard;
+                        padding: 5px;
+                        padding-left: 10px;
+                        @include desktop-query {
+                            width: 120%;
+                        }
+                        .cta {
+                            float: right;
+                            position: relative;
+                            margin-top: -43px;
+                            padding-right: 10px;
+                            color: black;
+                        }
                     }
                 }
             }
