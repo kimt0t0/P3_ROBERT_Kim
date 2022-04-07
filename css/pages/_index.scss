@@ -29,7 +29,6 @@
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                width: 100%;
                 padding: 10px;
                 margin: 0;
                 border: none;
@@ -88,7 +87,6 @@
         }
     }
     &.__fonctionnement, &.__restaurants {
-        width: 100%;
         padding: 15px;
     }
     &.__fonctionnement {
