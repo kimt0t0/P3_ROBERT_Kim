@@ -136,15 +136,13 @@ main {
                     }
                 }
                 .__display-price {
-                    display: flex;
+                    display: block;
                     align-self: flex-end;
                     width: 3%;
-                    padding: 3% 5% 3% 3%;
-                    margin-right: 1%;
-                    transition: transform 600ms ease-in-out;
+                    padding: 3% 6% 3% 3%;
                     @include small-bold;
                 }
-                .__input.--menu, .__icone.--menu {
+                .__input.--menu, .__icone.--menu, .__display-text, .__display-price {
                     transition: transform 600ms ease-in-out;
                 }
                 .__input.--menu {
@@ -180,11 +178,13 @@ main {
                         }
                     }
                     .__display-price {
-                        transform: translateX(0%);
+                        transform: translateX(-60%);
                     }
                     .__display-text {
-                        width: 60%;
+                        width: 75%;
                         h2, p {
+                            width: 85%;
+                            transform-origin: left;
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis; /* ne fonctionne pas */
