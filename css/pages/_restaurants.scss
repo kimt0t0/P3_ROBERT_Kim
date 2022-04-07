@@ -126,8 +126,12 @@ main {
                 @include top-corners;
                 display: flex;
                 flex-direction: row;
+                position: relative;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 .__display-text {
-                    width: 85%;
+                    width: 95%;
                     h2, p {
                         line-height: 1;
                         white-space: nowrap;
@@ -143,37 +147,41 @@ main {
                     @include small-bold;
                 }
                 .__input.--menu, .__icone.--menu {
+                    transition: transform 600ms ease-in-out;
+                }
+                .__input.--menu {
+                    position: absolute;
+                    right: -50%;
+                    width: 100px;
+                    height: auto;
                     opacity: 0;
+                }
+                .__icone.--menu {
+                    opacity: 100%;
+                    position: absolute;
+                    right: -20%;
+                    width: 20%;
+                    height: 100%;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $tertiary-color;
+                    color: white;
                 }
                 &:hover {
                     .__display-text {
-                        min-width: 40%;
-                        max-width: 80%;
+                        width: 68%
                     }
                     .__input.--menu {
-                        left: 70%;
-                        opacity: 00%;
-                        width: 120px;
                         cursor: pointer;
+                        transform: translateX(-150%);
                     }
                     .__icone.--menu {
-                        opacity: 100%;
-                        position: relative;
-                        left: 0;
-                        min-width: 18%;
-                        border-top-right-radius: 15px;
-                        border-bottom-right-radius: 15px;
-                        margin-left: 2%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: $tertiary-color;
-                        color: white;
+                        transform: translateX(-100%);
                         &:hover {
                             cursor: pointer;
-                        }
-                        .--checked.--menu {
-                            display: block;
                         }
                     }
                 }
