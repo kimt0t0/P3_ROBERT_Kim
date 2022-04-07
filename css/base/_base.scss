@@ -43,9 +43,11 @@ body {
         align-content: initial;
         main {
             width: 100%;
+            display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-content: space-between;
+            flex-wrap: wrap;
         }
     }
 
