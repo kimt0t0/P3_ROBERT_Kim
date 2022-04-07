@@ -18,6 +18,9 @@
         bottom: -42%;
         left: 72%;
     }
+    @include tablet-query {
+        display: none;
+    }
     @include desktop-query {
         display: none;
     }
