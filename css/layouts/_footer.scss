@@ -8,6 +8,12 @@ footer {
         padding: 20px;
         padding-left: 12%;
     }
+    @include tablet-query {
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch;
+        padding: 20px 5% 20px 5%;
+    }
     .title.__footer, .link.__footer {
         color: white;
         text-decoration: none;
@@ -19,6 +25,9 @@ footer {
         font-size: 18px;
         @include desktop-query {
             margin-right: 12%;
+        }
+        @include tablet-query {
+            margin-right: 5%;
         }
     }
     .menu-nav {
@@ -33,6 +42,17 @@ footer {
                     width: 200px;
                     padding-top: 15px;
                     padding-right: 3rem;
+                }
+            }
+            @include tablet-query {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                .list-style.__footer {
+                    text-align: left;
+                    width: fit-content;
+                    padding-top: 15px;
+                    padding-right: 2.5rem;
                 }
             }
         }

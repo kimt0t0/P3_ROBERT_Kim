@@ -10,12 +10,15 @@ header {
             height: 10%;
             padding: 3rem 0 3rem 5rem;
         }
+        @include tablet-query {
+            padding: 3rem 0 2rem 6rem;
+        }
     }
-    @include tablet {
+    @include tablet-query {
         justify-content: flex-start;
         .logo-site {
-            width: 15%;
-            height: 15%;
+            width: 30%;
+            height: 30%;
             margin-bottom: 7%;
         }
     }

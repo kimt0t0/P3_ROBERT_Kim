@@ -52,7 +52,7 @@
     }
 }
 
-@mixin tablet{
+@mixin tablet-query {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
         @content;
     }
