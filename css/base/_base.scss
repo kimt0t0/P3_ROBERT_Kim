@@ -37,6 +37,7 @@ body {
             flex-direction: row;
             justify-content: flex-start;
             align-content: space-between;
+            flex-wrap: wrap;
         }
     }
     @include tablet-query { /* voire si je peux supprimer pour éviter de répéter */
