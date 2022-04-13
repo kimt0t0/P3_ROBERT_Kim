@@ -6,19 +6,21 @@ header {
         height: 40%;
         padding: 20px;
         @include desktop-query {
-            width: 10%;
-            height: 10%;
-            padding: 3rem 0 3rem 5rem;
+            width: 15%;
+            height: auto;
+            justify-content: center;
+            margin: auto;
+            padding-left: 0;
         }
         @include tablet-query {
-            padding: 3rem 0 2rem 6rem;
+            padding-left: 0;
         }
     }
     @include tablet-query {
         justify-content: flex-start;
         .logo-site {
-            width: 30%;
-            height: 30%;
+            width: 15%;
+            height: auto;
             margin-bottom: 7%;
         }
     }
