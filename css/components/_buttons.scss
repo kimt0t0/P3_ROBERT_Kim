@@ -41,7 +41,7 @@
         position: absolute;
         opacity: 0;
         &:hover + .__icone, &:checked + .__icone {
-            color: transparent;
+            text-fill-color: transparent;
             background-clip: text;
             background: $gradient-01;
         }
