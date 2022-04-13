@@ -130,17 +130,32 @@ main {
                 white-space: nowrap;
                 overflow: hidden;
                 .__display-text {
-                    width: 95%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    padding: 0.5rem;
+                    flex-wrap: nowrap;
                     h2, p {
-                        line-height: 1;
+                        line-height: 0;
                     }
-                }
-                .__display-price {
-                    display: block;
-                    align-self: flex-end;
-                    width: 3%;
-                    padding: 3% 6% 3% 3%;
-                    @include small-bold;
+                    .__description {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        p {
+                            line-height: 0;
+                        }
+                        .__display-price {
+                            display: block;
+                            align-self: flex-end;
+                            width: 15%;
+                            @include small-bold;
+                        }
+                    }
                 }
                 .__input.--menu, .__icone.--menu, .__display-text, .__display-price {
                     transition: transform 600ms ease-in-out;
@@ -177,23 +192,12 @@ main {
                             cursor: pointer;
                         }
                     }
-                    .__display-price {
-                        transform: translateX(-60%);
-                    }
                     .__display-text {
-                        width: 75%;
-                        h2, p {
-                            width: 85%;
-                            transform-origin: left;
-                            white-space: nowrap;
-                            overflow: hidden;
-                            text-overflow: ellipsis; /* ne fonctionne pas */
-                        }
-                        
+                        transform-origin: left;
+                        transform: scaleX(80%);
                     }
                 }
             }
         }
-    }
-    
+    }  
 }
