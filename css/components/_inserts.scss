@@ -1,27 +1,16 @@
 .aside-card.__new {
     box-sizing: border-box;
-    width: 20%;
-    height: 3%;
     text-align: center;
-    padding: 1.5%;
+    padding: 0.5rem;
     border-radius: 5%;
     background-color: $tertiary-color;
     color: darken($tertiary-color, 35%);
     z-index: 2;
     position: absolute;
     @include small-bold;
-    &.--01 {
-        bottom: -7%;
-        left: 72%;
-    }
-    &.--02 {
-        bottom: -42%;
-        left: 72%;
-    }
-    @include tablet-query {
-        display: none;
-    }
+    top: 8px;
+    right: 8px;
     @include desktop-query {
-        display: none;
+        right: -42px;
     }
 }
