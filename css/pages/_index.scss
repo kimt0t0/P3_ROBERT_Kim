@@ -5,6 +5,11 @@
         padding-bottom: 0;
         margin: 2% 0 2% 0;
     }
+    @include tablet-query {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+    }
     &.__infoposition {
         width: 100%;
         padding: 0;
@@ -12,7 +17,13 @@
         background-color: $grey-01;
         text-align: center;
         @include tablet-query {
-            height: 20%;
+            width: 520px;
+            height: 240px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            white-space: nowrap;
+            margin: auto;
             border-radius: 15px;
             h1 {
                 font-size: 18px;
@@ -51,6 +62,10 @@
                 box-shadow: 0 2px 5px $grey-04 inset;
                 @include desktop-query {
                     justify-content: center;
+                    border-top-right-radius: 15px;
+                    border-top-left-radius: 15px;
+                }
+                @include tablet-query {
                     border-top-right-radius: 15px;
                     border-top-left-radius: 15px;
                 }
@@ -111,7 +126,10 @@
         margin: auto;
         @include tablet-query {
             width: 40%;
-            margin: 0;
+            margin: auto;
+            h1 {
+                text-align: center;
+            }
         }
         @include desktop-query {
             width: 30%;
@@ -144,6 +162,11 @@
                 @include bottom-corners;
                 @include border($grey-03);
                 @include desktop-query {
+                    white-space: nowrap;
+                    margin-left: 10%;
+                    padding: 1.5rem 1.5rem 1.2rem 0.4rem;
+                }
+                @include tablet-query {
                     white-space: nowrap;
                     margin-left: 10%;
                     padding: 1.5rem 1.5rem 1.2rem 0.4rem;
@@ -183,9 +206,15 @@
         background-color: $grey-01;
         @include tablet-query {
             width: 50%;
-            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            margin: auto;
             padding: 0 1.5rem 1.5rem 1.5rem;
             background-color: transparent;
+            h1 {
+                text-align: center;
+            }
         }
         @include desktop-query {
             width: 100%;

@@ -20,7 +20,11 @@ footer {
             justify-content: stretch;
             margin: auto;
         }
-        
+        @include tablet-query {
+            display: flex;
+            justify-content: stretch;
+            margin: auto;
+        }
         .title.__footer, .link.__footer {
             color: white;
             text-decoration: none;
