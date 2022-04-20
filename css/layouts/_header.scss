@@ -1,27 +1,22 @@
 header {
     display: flex;
     justify-content: center;
+    margin: auto;
     .logo-site {
         width: 40%;
         height: 40%;
         padding: 20px;
         @include desktop-query {
-            width: 15%;
+            width: 50%;
             height: auto;
             justify-content: center;
             margin: auto;
-            padding-left: 0;
         }
         @include tablet-query {
-            padding-left: 0;
-        }
-    }
-    @include tablet-query {
-        justify-content: flex-start;
-        .logo-site {
-            width: 15%;
+            width: 50%;
             height: auto;
-            margin-bottom: 7%;
+            justify-content: center;
+            margin: auto;
         }
     }
 }

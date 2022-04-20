@@ -13,6 +13,7 @@
         text-align: center;
         @include tablet-query {
             height: 20%;
+            border-radius: 15px;
             h1 {
                 font-size: 18px;
             }
@@ -28,7 +29,7 @@
             justify-content: space-between;
             white-space: nowrap;
             margin: auto;
-            margin-top: 2rem;
+            border-radius: 15px;
         }
         .form.__infoposition {
             @include desktop-query {
@@ -50,6 +51,8 @@
                 box-shadow: 0 2px 5px $grey-04 inset;
                 @include desktop-query {
                     justify-content: center;
+                    border-top-right-radius: 15px;
+                    border-top-left-radius: 15px;
                 }
                 .label__infoposition {
                     font-size: 18px;
@@ -108,12 +111,11 @@
         margin: auto;
         @include tablet-query {
             width: 40%;
-            margin: 3% 0 0 0;
+            margin: 0;
         }
         @include desktop-query {
             width: 30%;
             margin: auto;
-            margin-top: 2rem;
             height: 15%;
             display: flex;
             flex-direction: column; 
@@ -181,12 +183,14 @@
         background-color: $grey-01;
         @include tablet-query {
             width: 50%;
-            margin: 3% 0 0 0;
+            margin: 0;
+            padding: 0 1.5rem 1.5rem 1.5rem;
             background-color: transparent;
         }
         @include desktop-query {
             width: 100%;
-            margin: 0.5% 0 0 0;
+            margin: 0;
+            padding: 0 1.5rem 1.5rem 1.5rem;
             background-color: transparent;
             display: flex;
             flex-direction: column;

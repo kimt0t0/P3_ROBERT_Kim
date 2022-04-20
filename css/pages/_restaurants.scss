@@ -5,7 +5,7 @@
         margin: auto;
         @include desktop-query {
             align-content: center;
-            margin: 0 0 3% 0;
+            margin: auto;
         }
     }
     .__back {
@@ -16,7 +16,7 @@
         margin-right: 0;
         @include desktop-query {
             align-self: center;
-            margin: 5.5% 2% 2% 2%;
+            margin: 4% 2% 2% 2%;
         }
         .fa-solid.fa-arrow-left {
             color: $grey-05;
@@ -60,7 +60,7 @@ main {
     background-color: $grey-01;
     @include top-corners();
     @include desktop-query {
-        margin: 3% 0 0 0;
+        margin: 0;
         padding: 2% 0% 5% 0%;
     }
     .__title {
@@ -135,7 +135,6 @@ main {
                     flex-direction: column;
                     justify-content: flex-start;
                     padding: 0.5rem;
-                    flex-wrap: nowrap;
                     h2, p {
                         line-height: 0;
                     }
@@ -152,7 +151,7 @@ main {
                         .__display-price {
                             display: block;
                             align-self: flex-end;
-                            width: 15%;
+                            width: 10%;
                             @include small-bold;
                         }
                     }
