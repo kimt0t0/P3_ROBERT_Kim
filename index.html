@@ -60,19 +60,20 @@
             <section class="section --grey __restaurants">
                 <h1>Restaurants</h1>
 
-                    <ol class="carousel__viewport">
+                <section class="__display-articles">
                 
                         <!-- <button type="radio" class="scroller">
                             <i class="fa fa-arrow-left no-mobile" aria-hidden="true"></i>
                         </button> -->
 
-                        <section class="__display-articles">
+                        <ol class="carousel__viewport">
 
                     
                             <li id="carousel__slide-01" tabindex="0" class="carousel_slide">
                                 <article class="card">
                                     <a href="pages/menu-restau-01.html" class="link __card-index">
-                                        <img src="images/restaurants/la-palette-du-gout.jpg" alt="Photographie - La Palette du Goût (restaurant)" class="cardimg" /></a>
+                                        <img src="images/restaurants/la-palette-du-gout.jpg" alt="Photographie - La Palette du Goût (restaurant)" class="cardimg" />
+                                    </a>
                                     <div class="aside-card __new --01">Nouveau</div>
                                     <div class="textcard">
                                         <h2>La palette du goût</h2>
@@ -85,11 +86,20 @@
                                         </form>
                                     </div>
                                 </article>
+
+                                <div class="carousel__snapper">
+                                    <a href="#carousel__slide-04"
+                                       class="carousel__prev">Go to last slide</a>
+                                    <a href="#carousel__slide-02"
+                                       class="carousel__next">Go to next slide</a>
+                                  </div>
                             </li>
 
-                            <li id="carousel__slide-01" tabindex="0" class="carousel_slide">
+                            <li id="carousel__slide-02" tabindex="0" class="carousel_slide">
                                 <article class="card">
-                                    <a href="pages/menu-restau-02.html" class="link __card-index"><img src="images/restaurants/la-note-enchantee.jpg" alt="Photographie - La Note enchantée (restaurant)" class="cardimg" /></a>
+                                    <a href="pages/menu-restau-02.html" class="link __card-index">
+                                        <img src="images/restaurants/la-note-enchantee.jpg" alt="Photographie - La Note enchantée (restaurant)" class="cardimg" />
+                                    </a>
                                     <div class="aside-card __new --02">Nouveau</div>
                                     <div class="textcard">
                                         <h2>La note enchantée</h2>
@@ -102,11 +112,20 @@
                                         </form>
                                     </div>
                                 </article>
+
+                                <div class="carousel__snapper">
+                                    <a href="#carousel__slide-01"
+                                       class="carousel__prev">Go to last slide</a>
+                                    <a href="#carousel__slide-03"
+                                       class="carousel__next">Go to next slide</a>
+                                  </div>
                             </li>
 
-                            <li id="carousel__slide-01" tabindex="0" class="carousel_slide">
+                            <li id="carousel__slide-03" tabindex="0" class="carousel_slide">
                                 <article class="card">
-                                    <a href="pages/menu-restau-03.html" class="link __card-index"><img src="images/restaurants/a-la-francaise.jpg" alt="Photographie - À la française (restaurant)" class="cardimg" /></a>
+                                    <a href="pages/menu-restau-03.html" class="link __card-index">
+                                        <img src="images/restaurants/a-la-francaise.jpg" alt="Photographie - À la française (restaurant)" class="cardimg" />
+                                    </a>
                                     <div class="textcard">
                                         <h2>À la française</h2>
                                         <p>Cité Rouge</p>
@@ -118,11 +137,20 @@
                                         </form>
                                     </div>
                                 </article>
+
+                                <div class="carousel__snapper">
+                                    <a href="#carousel__slide-02"
+                                       class="carousel__prev">Go to last slide</a>
+                                    <a href="#carousel__slide-04"
+                                       class="carousel__next">Go to next slide</a>
+                                  </div>
                             </li>
                 
-                            <li id="carousel__slide-01" tabindex="0" class="carousel_slide">
+                            <li id="carousel__slide-04" tabindex="0" class="carousel_slide">
                                 <article class="card">
-                                    <a href="pages/menu-restau-04.html" class="link __card-index"><img src="images/restaurants/le-delice-des-sens.jpg" alt="Photographie - Le délice des sens (restaurant)" class="cardimg" /></a>
+                                    <a href="pages/menu-restau-04.html" class="link __card-index">
+                                        <img src="images/restaurants/le-delice-des-sens.jpg" alt="Photographie - Le délice des sens (restaurant)" class="cardimg" />
+                                    </a>
                                     <div class="textcard">
                                         <h2>Le délice des sens</h2>
                                         <p>Folie-Méricourt</p>
@@ -134,15 +162,45 @@
                                         </form>
                                     </div>
                                 </article>
+
+                                <div class="carousel__snapper">
+                                    <a href="#carousel__slide-03"
+                                       class="carousel__prev">Go to last slide</a>
+                                    <a href="#carousel__slide-01"
+                                       class="carousel__next">Go to next slide</a>
+                                  </div>
                             </li>
 
 
                             <!-- <button type="radio" class="scroller">
                                 <i class="fa fa-arrow-right no-mobile" aria-hidden="true"></i>
                                 </button> -->
-                        </section>
+                            </ol>
 
-                    </ol>
+                            <aside class="carousel__navigation">
+                                <ol class="carousel__navigation-list">
+            
+                                    <li class="carousel__navigation-item">
+                                        <a href="#carousel__slide-01" class="carousel__navigation-button">Go to slide 1</a>
+                                    </li>
+            
+                                    <li class="carousel__navigation-item">
+                                        <a href="#carousel__slide-02" class="carousel__navigation-button">Go to slide 2</a>
+                                    </li>
+            
+                                    <li class="carousel__navigation-item">
+                                        <a href="#carousel__slide-03" class="carousel__navigation-button">Go to slide 3</a>
+                                    </li>
+            
+                                    <li class="carousel__navigation-item">
+                                        <a href="#carousel__slide-04" class="carousel__navigation-button">Go to slide 4</a>
+                                    </li>
+                                </ol>
+                            </aside>
+
+                </section>
+
+
 
 
             </section>

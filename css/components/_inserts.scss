@@ -10,7 +10,4 @@
     @include small-bold;
     top: 8px;
     right: 8px;
-    @include desktop-query {
-        right: -42px;
-    }
 }

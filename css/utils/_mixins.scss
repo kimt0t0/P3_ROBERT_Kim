@@ -49,8 +49,23 @@
 @mixin desktop-query {
     @media screen and (min-width: map-get($breakpoints, desktop)) {
         @content;
+        @media (hover: hover) {
+            .carousel__snapper {
+                animation-name: tonext, snap;
+                animation-timing-function: ease;
+                animation-duration: 4000ms;
+                animation-iteration-count: infinite;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .carousel__snapper {
+                animation-name: none;
+            }
+        }
     }
-}
+    }
+    /* spécifiques pour le carousel en prenant en compte les préférences du nav: */
+    
 
 @mixin tablet-query {
     @media screen and (min-width: map-get($breakpoints, tablet)) {
