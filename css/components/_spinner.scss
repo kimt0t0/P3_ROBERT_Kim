@@ -2,21 +2,41 @@ body {
     .loading-spinner {
         z-index: 2;
         position: absolute;
-        top: 2%;
-        left: 0;
-        right: 0;
+        top: 15%;
+        left: 25%;
         display: flex;
         justify-content: center;
         align-content: center;
-        margin: auto;
-        width: 80%;
-        height: 40%;
-        border-radius: 20px;
         background-color: $tertiary-color;
-        color: $grey-05;
-        opacity: 0.75;
-        &fa.fa-spinner {
-            animation: load-and-fade 2000ms both;
+        border-radius: 20px;
+        width: 50%;
+        height: 40%;
+        opacity: 0.7;
+        animation: load-and-fade 1500ms forwards;
+        &::after {
+            animation: 1500ms linear infinite spinner;
+            animation-play-state: inherit;
+            border: solid 5px $grey-03;
+            border-bottom-color: $primary-color;
+            border-radius: 50%;
+            content: "";
+            height: 40px;
+            width: 40px;
+            transform: translate3d(-50%, -50%, 0);
+            will-change: transform;
+            position: absolute;
+            top: 50%;
+            left: 50%;
         }
+        
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3D(-50%, -50%, 0) rotate(360deg);
     }
 }

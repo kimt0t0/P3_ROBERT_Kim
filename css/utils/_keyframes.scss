@@ -1,19 +1,19 @@
 /* LOADING-SPINNER */
 @keyframes load-and-fade {
-    40% {
-        opacity: 0.75;
-    }
     50% {
+        opacity: 0.7;
+    }
+    60% {
         opacity: 0.6;
     }
-    75% {
-        opacity: 0.4;
+    70% {
+        opacity: 0.5;
     }
     80% {
         opacity: 0.3;
     }
     90% {
-        opacity: 0.2;
+        opacity: 0.1;
     }
     100% {
         opacity: 0;
