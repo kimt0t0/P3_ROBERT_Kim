@@ -1,0 +1,22 @@
+body {
+    .loading-spinner {
+        z-index: 2;
+        position: absolute;
+        top: 2%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: auto;
+        width: 80%;
+        height: 40%;
+        border-radius: 20px;
+        background-color: $tertiary-color;
+        color: $grey-05;
+        opacity: 0.75;
+        &fa.fa-spinner {
+            animation: load-and-fade 2000ms both;
+        }
+    }
+}

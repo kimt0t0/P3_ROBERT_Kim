@@ -1,3 +1,27 @@
+/* LOADING-SPINNER */
+@keyframes load-and-fade {
+    40% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    75% {
+        opacity: 0.4;
+    }
+    80% {
+        opacity: 0.3;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* CAROUSEL */
+
 @keyframes tonext {
     75% {
         left: 0;
@@ -43,3 +67,27 @@
     }
 }
 
+/* APPARITION PROGRESSIVE DU MENU */
+@keyframes reveal-menu {
+    20% {
+        opacity: 0.2;
+    }
+    40% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    60% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}

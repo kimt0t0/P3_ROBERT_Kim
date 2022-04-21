@@ -38,6 +38,7 @@ body {
             justify-content: flex-start;
             align-content: space-between;
             flex-wrap: wrap;
+            position: relative;
         }
     }
     @include tablet-query {

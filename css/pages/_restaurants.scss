@@ -1,16 +1,10 @@
 /* *** PAGES > RESTAURANTS > HEADER *** */
 .header__menu {
     .logo-site {
+        display: flex;
         justify-content: center;
+        align-content: center;
         margin: auto;
-        @include desktop-query {
-            align-content: center;
-            margin: auto;
-        }
-        @include tablet-query {
-            align-content: center;
-            margin: auto;
-        }
     }
     .__back {
         text-decoration: none;
@@ -116,10 +110,10 @@ main {
             @include desktop-query {
                 display: flex;
                 align-content: flex-start;
-                margin: auto;
-                margin-top: 3%;
                 width: 15%;
                 height: auto;
+                margin: auto;
+                margin-top: 3%;
                 border-radius: 15px;
                 @include top-corners;
                 @include bottom-corners;
@@ -127,15 +121,20 @@ main {
             }
             @include tablet-query {
                 display: flex;
-                width: 40%;
+                align-content: flex-start;
+                width: 15%;
                 height: auto;
-                justify-content: center;
                 margin: auto;
-                margin-bottom: 2rem;
+                margin-top: 3%;
                 border-radius: 15px;
+                @include top-corners;
+                @include bottom-corners;
+                @include border($grey-03);
             }
         }
         .__entrees, .__plats, .__desserts {
+            z-index: 1;
+            position: relative;
             border: none;
             margin-bottom: 20px;
             @include desktop-query {
@@ -143,6 +142,16 @@ main {
             }
             @include tablet-query {
                 margin-bottom: 0;
+            }
+            .hide-menu {
+                z-index: 2;
+                opacity: 1;
+                background-color: $grey-01;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
             }
             .subtitle.--big-letters {
                 text-transform: uppercase;
@@ -171,6 +180,7 @@ main {
                 position: relative;
                 white-space: nowrap;
                 overflow: hidden;
+                opacity: 0;
                 @include tablet-query {
                     margin: auto auto 1rem auto;
                 }
@@ -241,6 +251,20 @@ main {
                         transform: scaleX(80%);
                     }
                 }
+            }
+        }
+        .__entrees {
+            .__textcard {
+                animation: reveal-menu 1500ms 1500ms both;
+            }
+        }
+        .__plats {.__textcard {
+            animation: reveal-menu 1500ms 2000ms both;
+            }
+        }
+        .__desserts {
+            .__textcard {
+                animation: reveal-menu 1500ms 2500ms both;
             }
         }
     }  
