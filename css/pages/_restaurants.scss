@@ -256,16 +256,16 @@ main {
         }
         .__entrees {
             .__textcard {
-                animation: reveal-menu 1500ms 1500ms both;
+                animation: reveal-menu 1500ms 1000ms both;
             }
         }
         .__plats {.__textcard {
-            animation: reveal-menu 1500ms 2000ms both;
+            animation: reveal-menu 1500ms 1500ms both;
             }
         }
         .__desserts {
             .__textcard {
-                animation: reveal-menu 1500ms 2500ms both;
+                animation: reveal-menu 1500ms 2000ms both;
             }
         }
     }  
