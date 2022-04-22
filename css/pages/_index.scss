@@ -322,6 +322,7 @@
                     margin: 0;
                     .carousel_slide {
                         position: relative;
+                        z-index: 1;
                         flex: 0 0 100%;
                         width: 100%;
                         counter-increment: item;
@@ -366,9 +367,9 @@
                         width: 100%;
                         padding: 5px;
                         padding-left: 10px;
+                        position: relative;
                         .cta {
                             float: right;
-                            position: relative;
                             margin-top: -43px;
                             padding-right: 40px;
                             color: black;
