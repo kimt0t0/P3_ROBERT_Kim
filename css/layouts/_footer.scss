@@ -52,6 +52,11 @@ footer {
             .list.__footer {
                 list-style: none;
                 margin: 1rem 0 0 0;
+                .__icone {
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    font-size: 12px;
+                }
                 @include desktop-query {
                     display: flex;
                     flex-direction: row;
