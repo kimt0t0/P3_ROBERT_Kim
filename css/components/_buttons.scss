@@ -25,6 +25,9 @@
         width: 50%;
         align-self: center;
         margin: auto;
+        @include tablet-query {
+            width: 30%;
+        }
         @include desktop-query {
             width: 10%;
             display: block;
@@ -37,6 +40,9 @@
 /* *** ÉLÉMENTS > COEUR LIKE *** */
 .cta.__like {
     position: relative;
+    &:hover {
+        cursor: pointer;
+    }
     .__icone {
         font-size: 22px;
         font-weight: lighter;
@@ -59,7 +65,6 @@
         position: absolute;
         opacity: 0;
         &:hover, &:checked {
-            cursor: pointer;
             +.__icone{
                 .fa-regular.fa-heart {
                     opacity: 0;

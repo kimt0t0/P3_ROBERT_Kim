@@ -123,10 +123,10 @@ main {
             @include tablet-query {
                 display: flex;
                 align-content: flex-start;
-                width: 15%;
+                width: 35%;
                 height: auto;
                 margin: auto;
-                margin-top: 3%;
+                margin-top: 0;
                 border-radius: 15px;
                 @include top-corners;
                 @include bottom-corners;
@@ -169,7 +169,11 @@ main {
                     border-bottom: 3px #99E2D0 solid;
                     @include tablet-query {
                         margin: auto;
-                        width: 4%;
+                        width: 6%;
+                    }
+                    @include desktop-query {
+                        margin: auto;
+                        width: 6%;
                     }
                 }
             }
