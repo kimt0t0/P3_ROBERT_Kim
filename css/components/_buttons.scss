@@ -36,19 +36,37 @@
 
 /* *** ÉLÉMENTS > COEUR LIKE *** */
 .cta.__like {
-    .__input {
-        cursor: pointer;
-        position: absolute;
-        opacity: 0;
-        &:hover + .__icone, &:checked + .__icone {
-            text-fill-color: transparent;
-            background-clip: text;
-            background: $gradient-01;
-        }
-    }
     .__icone {
         font-size: 22px;
         font-weight: lighter;
         transition: transform 400ms;
+        .fa-regular.fa-heart {
+            position: absolute;
+            opacity: 1;
+            transition: opacity 1000ms ease-in-out;
+        }
+        .fa.fa-heart {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1000ms ease-in-out;
+            background: $gradient-01;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    .__input {
+        position: absolute;
+        opacity: 0;
+        &:hover, &:checked {
+            cursor: pointer;
+            +.__icone{
+                .fa-regular.fa-heart {
+                    opacity: 0;
+                }
+                .fa.fa-heart {
+                    opacity: 1;
+                }
+            }
+        }
     }
 }

@@ -91,3 +91,55 @@
         opacity: 1;
     }
 }
+
+/* ANIMATION LIKE */
+@keyframes like-activated {
+    10% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.15;
+    }
+    30% {
+        opacity: 0.25;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.95;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hide-like-contour {
+    10% {
+        opacity: 0.9;
+    }
+    20% {
+        opacity: 0.85;
+    }
+    30% {
+        opacity: 0.75;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    70% {
+        opacity: 0.1;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
