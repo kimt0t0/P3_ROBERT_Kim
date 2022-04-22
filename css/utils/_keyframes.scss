@@ -1,4 +1,13 @@
 /* LOADING-SPINNER */
+@keyframes spinner {
+    0% {
+        transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate3D(-50%, -50%, 0) rotate(360deg);
+    }
+}
+
 @keyframes load-and-fade {
     50% {
         opacity: 0.9;
@@ -13,7 +22,11 @@
         opacity: 0.3;
     }
     90% {
-        opacity: 0.1;
+        opacity: 0.2;
+    }
+    95% {
+        opacity: 0;
+        z-index: 0;
     }
     100% {
         opacity: 0;

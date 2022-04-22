@@ -1,16 +1,15 @@
 body {
     .loading-spinner {
-        z-index: 2;
+        z-index: 5;
         position: absolute;
-        top: 15%;
-        left: 25%;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: center;
         align-content: center;
         background-color: $tertiary-color;
-        border-radius: 20px;
-        width: 50%;
-        height: 40%;
+        width: 100%;
+        height: 100%;
         opacity: 1;
         animation: load-and-fade 1500ms forwards;
         .loading-text {
@@ -18,7 +17,7 @@ body {
             font-weight: bold;
             text-align: center;
             color: white;
-            line-height: 2;
+            margin-top: 8rem;
         }
         &::after {
             animation: 1500ms linear infinite spinner;
@@ -27,8 +26,8 @@ body {
             border-bottom-color: $primary-color;
             border-radius: 50%;
             content: "";
-            height: 40px;
-            width: 40px;
+            height: 60px;
+            width: 60px;
             transform: translate3d(-50%, -50%, 0);
             will-change: transform;
             position: absolute;
@@ -36,14 +35,5 @@ body {
             left: 50%;
         }
         
-    }
-}
-
-@keyframes spinner {
-    0% {
-        transform: translate3d(-50%, -50%, 0) rotate(0deg);
-    }
-    100% {
-        transform: translate3D(-50%, -50%, 0) rotate(360deg);
     }
 }
