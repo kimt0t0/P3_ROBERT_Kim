@@ -40,7 +40,7 @@
 /* *** ÉLÉMENTS > COEUR LIKE *** */
 .cta.__like {
     position: relative;
-    &:hover {
+    :hover {
         cursor: pointer;
     }
     .__icone {
