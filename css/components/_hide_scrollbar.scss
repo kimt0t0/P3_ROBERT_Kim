@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent;
+    scrollbar-width: 0px;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0;
+      }
+    &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    &::-webkit-scrollbar-thumb {
+        background: transparent;
+        border: none;
+      }
+  }
