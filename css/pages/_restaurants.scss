@@ -189,6 +189,7 @@ main {
                 cursor: pointer;
                 @include tablet-query {
                     margin: auto auto 1rem auto;
+                    width: 380px;
                 }
                 .__display-text {
                     display: flex;
