@@ -161,13 +161,14 @@
                 @include top-corners;
                 @include bottom-corners;
                 @include border($grey-03);
-                @include desktop-query {
+                @include tablet-query {
+                    width: 100%;
                     white-space: nowrap;
                     margin-left: 10%;
                     padding: 1.5rem 1.5rem 1.2rem 0.4rem;
                 }
-                @include tablet-query {
-                    width: 100%;
+                @include desktop-query {
+                    width: 80%;
                     white-space: nowrap;
                     margin-left: 10%;
                     padding: 1.5rem 1.5rem 1.2rem 0.4rem;

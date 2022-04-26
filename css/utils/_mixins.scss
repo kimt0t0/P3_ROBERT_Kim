@@ -21,19 +21,15 @@
     width: 380px;
     height: 70px;
     padding: 0;
-    padding-left: 5px;
     margin-bottom: 20px;
     background-color: white;
-    line-height: 1;
     @include bottom-corners;
     @include border($grey-03);
-    h2, p {
+    .__description {
         display: flex;
+        flex: 100%;
         flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
         font-size: 16px;
-        line-height: 0.5;
     }
 }
 
@@ -47,7 +43,7 @@
 
 /* MIXINS > MEDIA QUERIES */
 @mixin desktop-query {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @media screen and (min-device-width: map-get($breakpoints, desktop)) {
         @content;
         @media (hover: hover) {
             .carousel__snapper {
@@ -68,7 +64,7 @@
     
 
 @mixin tablet-query {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
+    @media screen and (min-device-width: map-get($breakpoints, tablet)) {
         @content;
     }
 }

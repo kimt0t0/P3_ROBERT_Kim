@@ -186,76 +186,87 @@ main {
                 white-space: nowrap;
                 overflow: hidden;
                 opacity: 0;
+                cursor: pointer;
                 @include tablet-query {
                     margin: auto auto 1rem auto;
                 }
                 .__display-text {
-                    width: 100%;
                     display: flex;
+                    flex: 100%;
                     flex-direction: column;
-                    justify-content: flex-start;
-                    padding: 0.5rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    transition: all 600ms;
                     h2, p {
-                        line-height: 0;
-                    }
-                    .__description {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
+                        margin: 0;
+                        padding: 0.5rem;
                         white-space: nowrap;
                         overflow: hidden;
                         text-overflow: ellipsis;
-                        p {
-                            line-height: 0;
-                        }
+                    }
+                    .__description {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: flex;
+                        flex: 100%;
+                        flex-direction: row;
+                        justify-content: space-between;
                         .__display-price {
-                            display: block;
-                            align-self: flex-end;
-                            width: 10%;
+                            display: inline-block;
+                            align-self: center;
+                            padding: 0.25rem;
+                            width: 12%;
                             @include small-bold;
                         }
                     }
                 }
-                .__input.--menu, .__icone.--menu, .__display-text, .__display-price {
-                    transition: transform 600ms ease-in-out;
-                }
-                .__input.--menu {
-                    position: absolute;
-                    right: -50%;
-                    width: 100px;
-                    height: auto;
-                    opacity: 0;
-                }
-                .__icone.--menu {
-                    opacity: 100%;
-                    position: absolute;
-                    right: -20%;
-                    width: 20%;
-                    height: 100%;
-                    border-top-right-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: $tertiary-color;
-                    color: white;
-                }
-                &:hover {
+                .__card-check {
+                    transition: all 600ms ease-in-out;
                     .__input.--menu {
-                        cursor: pointer;
-                        transform: translateX(-150%);
+                        position: absolute;
+                        right: -50%;
+                        width: 100px;
+                        height: auto;
+                        opacity: 0;
                     }
                     .__icone.--menu {
-                        transform: translateX(-100%);
-                        &:hover {
+                        opacity: 100%;
+                        position: absolute;
+                        right: -20%;
+                        width: 20%;
+                        height: 100%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $tertiary-color;
+                        color: white;
+                    }
+                }
+                &:hover, &:checked {
+                    .__card-check {
+                        .__input.--menu {
+                            transform: translateX(-150%);
+                            transition: transform 600ms ease-in-out;
+                        }
+                        .__icone.--menu {
+                            transform: translateX(-100%);
+                            transition: transform 600ms ease-in-out;
                             cursor: pointer;
+                            .fa-solid {
+                                transform: rotate(1turn);
+                                transition: transform 1200ms ease-in-out;
+                            }
                         }
                     }
                     .__display-text {
-                        transform-origin: left;
-                        transform: scaleX(0.8);
+                        max-width: 80%;
                     }
                 }
+                    
             }
         }
         .__entrees {
