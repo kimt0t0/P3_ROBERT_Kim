@@ -246,7 +246,7 @@ main {
                         color: white;
                     }
                 }
-                &:hover, &:checked {
+                &:hover {
                     .__card-check {
                         .__input.--menu {
                             transform: translateX(-150%);
