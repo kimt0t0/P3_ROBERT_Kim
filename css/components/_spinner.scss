@@ -9,7 +9,7 @@ body {
         align-content: center;
         background-color: $tertiary-color;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         opacity: 1;
         animation: load-and-fade 2000ms forwards;
         .loading-text {

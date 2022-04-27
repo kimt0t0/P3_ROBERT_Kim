@@ -25,27 +25,18 @@ body {
     counter-reset: section;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
-    margin: 0 !important;
+    justify-content: space-between;
     flex-wrap: wrap;
     white-space: normal;
+    margin: 0 !important;
     @include tablet-query {
+        justify-content: center;
         align-content: center;
         main {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             flex-wrap: wrap;
-        }
-    }
-    @include desktop-query {
-        align-content: initial;
-        main {
-            flex-direction: column;
-            justify-content: flex-start;
-            align-content: space-between;
-            flex-wrap: wrap;
-            position: relative;
         }
     }
 

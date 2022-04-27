@@ -65,6 +65,7 @@ main {
         @include desktop-query {
             display: flex;
             flex-direction: row;
+            justify-content: space-around;
             flex-wrap: wrap;
             white-space: normal;
         }
@@ -75,27 +76,19 @@ main {
             display: none;
             @include tablet-query {
                 display: flex;
-                align-content: flex-start;
-                width: 30%; /* idéalement 30% et margin-top 0, mais sur petit PC ça rend mal */
-                height: auto;
+                justify-self: center;
                 margin: auto;
-                margin-top: 3%;
+                width: 30%;
+                height: auto;
                 border-radius: 15px;
                 @include top-corners;
                 @include bottom-corners;
                 @include border($grey-03);
             }
             @include desktop-query {
-                display: flex;
-                align-content: flex-start;
                 width: 15%;
-                height: auto;
-                margin: auto;
-                margin-top: 3%;
-                border-radius: 15px;
-                @include top-corners;
-                @include bottom-corners;
-                @include border($grey-03);
+                justify-self: flex-start;
+                align-self: center;
             }
         }
         .__entrees, .__plats, .__desserts {

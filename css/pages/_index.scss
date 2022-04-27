@@ -1,14 +1,11 @@
 .section {
     padding-bottom: 50px;
     @include tablet-query {
-        width: 100%;
         display: flex;
         justify-content: center;
-        margin: auto;
     }
+    /* GEOLOCALISATION */
     &.__infoposition {
-        padding: 0;
-        margin: 0;
         background-color: $grey-01;
         text-align: center;
         @include tablet-query {
@@ -17,6 +14,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            align-content: center;
             white-space: nowrap;
             margin: auto;
             border-radius: 15px;
@@ -26,16 +24,6 @@
             p {
                 font-size: 14px;
             }
-        }
-        @include desktop-query {
-            width: 520px;
-            height: 240px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            white-space: nowrap;
-            margin: auto;
-            border-radius: 15px;
         }
         .form.__infoposition {
             @include desktop-query {
@@ -107,17 +95,19 @@
             }
         }
     }
+
+    /* FONCTIONNEMENT */
     &.__fonctionnement, &.__restaurants {
-        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding: 5%;
         @include tablet-query {
+            padding: 0;
             height: 20%;
         }
     }
     &.__fonctionnement {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
         @include tablet-query {
             width: 40%;
             margin: auto;
@@ -126,11 +116,7 @@
             }
         }
         @include desktop-query {
-            width: 30%;
-            margin: auto;
-            height: 15%;
-            display: flex;
-            flex-direction: column; 
+            width: 25%;
         }
         .__liste {
             margin: 0;
@@ -149,8 +135,8 @@
                 display: flex;
                 justify-content: flex-start;
                 align-content: center;
+                margin-left: 2%;
                 padding: 6% 2% 5% 5%;
-                margin-left: 5%;
                 margin-bottom: 15px;
                 @include top-corners;
                 @include bottom-corners;
@@ -198,6 +184,8 @@
             }   
         }
     }
+
+    /* RESTAURANTS */
     &.__restaurants {
         background-color: $grey-01;
         @include tablet-query {
@@ -238,7 +226,6 @@
                 display: flex;
                 justify-content: center;
                 align-content: center;
-                margin: auto;
                 overflow: hidden;
                 position: relative;
                 filter: drop-shadow(0 0 10px $grey-02);
@@ -302,9 +289,6 @@
                         counter-increment: item;
                         .carousel__snapper {
                             display: flex;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
                             width: 100%;
                             height: 100%;
                             scroll-snap-align: center;
@@ -316,17 +300,12 @@
                     @include top-corners;
                     @include border($grey-03);
                     z-index: 2;
-                    padding-left: 0;
                     width: 95%;
                     height: 250px;
                     margin-bottom: 10%;
                     position: relative;
                     @include tablet-query {
-                        width: 320px;
-                        margin: auto;
-                    }
-                    @include desktop-query {
-                        width: 320px;
+                        width: 80%;
                         margin: auto;
                     }
                     }
@@ -343,6 +322,9 @@
                         padding: 5px;
                         padding-left: 10px;
                         position: relative;
+                        @include tablet-query {
+                            width: 100%;
+                        }
                         h2, p {
                             margin: 0;
                             padding: 0.15rem;
