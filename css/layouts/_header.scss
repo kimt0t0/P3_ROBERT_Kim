@@ -1,22 +1,46 @@
 header {
     display: flex;
     justify-content: center;
-    margin: auto;
-    .logo-site {
-        width: 40%;
-        height: 40%;
-        padding: 20px;
-        @include desktop-query {
-            width: 50%;
-            height: auto;
-            justify-content: center;
-            margin: auto;
-        }
+    .__logo-container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        height: 60px;
         @include tablet-query {
-            width: 50%;
-            height: auto;
-            justify-content: center;
-            margin: auto;
+            height: 80px;
+        }
+        .logo-site {
+            display: flex;
+            transform: scale(0.4);
+            @include tablet-query {
+                transform: scale(0.6);
+            }
+        }
+    }
+}
+
+
+/* HEADER DES PAGES RESTAURANTS */
+.header.__menu {
+    display: flex;
+    justify-content: space-around;
+    .__back {
+        display: flex;
+        text-decoration: none;
+        color: $grey-05;
+        align-self: center;
+        justify-self: center;
+        .fa-solid.fa-arrow-left {
+            color: $grey-05;
+        }
+    }
+    .__logo-container {
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        align-content: center;
+        .logo-site {
+            display: flex;
         }
     }
 }
