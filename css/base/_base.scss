@@ -25,32 +25,27 @@ body {
     counter-reset: section;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-content: space-between;
     margin: 0 !important;
     flex-wrap: wrap;
     white-space: normal;
+    @include tablet-query {
+        align-content: center;
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
     @include desktop-query {
         align-content: initial;
         main {
-            width: 100%;
             flex-direction: column;
             justify-content: flex-start;
             align-content: space-between;
             flex-wrap: wrap;
             position: relative;
-        }
-    }
-    @include tablet-query {
-        align-content: center;
-        margin: 0 auto auto 0;
-        main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-content: center;
-            flex-wrap: wrap;
         }
     }
 

@@ -1,17 +1,12 @@
 .section {
     padding-bottom: 50px;
-    @include desktop-query {
-        width: 100%;
-        padding-bottom: 0;
-        margin: 2% 0 2% 0;
-    }
     @include tablet-query {
+        width: 100%;
         display: flex;
         justify-content: center;
         margin: auto;
     }
     &.__infoposition {
-        width: 100%;
         padding: 0;
         margin: 0;
         background-color: $grey-01;
@@ -44,7 +39,6 @@
         }
         .form.__infoposition {
             @include desktop-query {
-                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;

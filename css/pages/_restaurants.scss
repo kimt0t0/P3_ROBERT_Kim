@@ -2,24 +2,19 @@
 main {
     &.restau-01 {
         background: url($img-restau-01) no-repeat;
-        background-size: 400px;
+        background-size: contain;
     }
     &.restau-02 {
         background: url($img-restau-02) no-repeat;
-        background-size: 400px;
+        background-size: contain;
     }
     &.restau-03 {
         background: url($img-restau-03) no-repeat;
-        background-size: 400px;
+        background-size: contain;
     }
     &.restau-04 {
         background: url($img-restau-04) no-repeat;
-        background-size: 400px;
-    }
-    @include desktop-query {
-        &.restau-01, &.restau-02, &.restau-03, &.restau-04 {
-            background: transparent;
-        }
+        background-size: contain;
     }
     @include tablet-query {
         &.restau-01, &.restau-02, &.restau-03, &.restau-04 {
@@ -32,17 +27,11 @@ main {
 .section.__menu {
     display: flex;
     flex-direction: column;
-    align-content: stretch;
-    margin-left: 0;
     margin-top: 250px;
-    padding: 10px 2px 50px 2px;
     background-color: $grey-01;
-    @include top-corners();
-    @include desktop-query {
-        margin: 0;
-        padding: 2% 0% 5% 0%;
-    }
+    @include top-corners;
     @include tablet-query {
+        width: auto;
         margin: 0;
     }
     .__title {
@@ -84,10 +73,10 @@ main {
         }
         .no-mobile.__restau-photo {
             display: none;
-            @include desktop-query {
+            @include tablet-query {
                 display: flex;
                 align-content: flex-start;
-                width: 15%;
+                width: 30%; /* idéalement 30% et margin-top 0, mais sur petit PC ça rend mal */
                 height: auto;
                 margin: auto;
                 margin-top: 3%;
@@ -96,10 +85,10 @@ main {
                 @include bottom-corners;
                 @include border($grey-03);
             }
-            @include tablet-query {
+            @include desktop-query {
                 display: flex;
                 align-content: flex-start;
-                width: 15%; /* idéalement 30% et margin-top 0, mais sur petit PC ça rend mal */
+                width: 15%;
                 height: auto;
                 margin: auto;
                 margin-top: 3%;
