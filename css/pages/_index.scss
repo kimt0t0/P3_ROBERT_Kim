@@ -69,7 +69,6 @@
             }
             .fieldset__infoposition {
                 border: none;
-                padding: 20px;
                 @include desktop-query {
                     display: flex;
                     flex-direction: column;

@@ -39,6 +39,16 @@ body {
             flex-wrap: wrap;
         }
     }
+    @include desktop-query {
+        justify-content: center;
+        align-content: center;
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
 
     h1 {
         font-size: 24px;
