@@ -25,12 +25,6 @@
     background-color: white;
     @include bottom-corners;
     @include border($grey-03);
-    @include tablet-query {
-        width: 30%;
-    }
-    @include desktop-query {
-        width: 25%;
-    }
     .__description {
         display: flex;
         flex: 100%;
