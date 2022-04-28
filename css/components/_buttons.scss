@@ -1,11 +1,11 @@
 /* *** ÉLÉMENTS > BOUTON BASE *** */
 .btn {
-    background: $gradient-01;
+    background-image: $gradient-01;
     color: white;
     padding: 15px;
     margin-bottom: 50px;
     border-radius: 50px;
-    transition: opacity 800ms ease-in-out;
+    transition: all 800ms ease-in-out;
     @include small-bold; 
     @include border($grey-03);
     @include tablet-query {
@@ -18,7 +18,8 @@
     }
     &:hover {
         cursor: pointer;
-        opacity: 0.7;
+        opacity: 0.8;
+        @include border($grey-04);
     }
     &.__order {
         display: grid;

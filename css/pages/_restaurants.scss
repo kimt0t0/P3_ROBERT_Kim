@@ -18,7 +18,7 @@ main {
     }
     @include tablet-query {
         &.restau-01, &.restau-02, &.restau-03, &.restau-04 {
-            background: transparent;
+            background: $grey-01;
         }
     }
 }
@@ -31,34 +31,32 @@ main {
     background-color: $grey-01;
     @include top-corners;
     @include tablet-query {
-        width: auto;
         margin: 0;
     }
-    .__title {
+    .__title-container {
         display: flex;
-        flex-direction: row;
         justify-content: space-evenly;
-        margin-left: 10px;
+        padding: 1.5rem 0;
         @include desktop-query {
-            width: 25%;
-            margin-left: 2%;
             flex-wrap: wrap;
             white-space: normal;
-        }
-        @include tablet-query {
             justify-content: center;
-            margin: auto;
-            h1 {
-                margin-right: 1.5rem;
+            padding: 4rem 0;
+            .title {
+                padding-right: 2%;
+            }
+            .__like-container {
+                padding-left: 2%;
             }
         }
-        .__menu {
+        .__title {
             font-family: Shrikhand;
+            line-height: 1;
+            margin: 0;
         }
-        .cta.__like {
-            align-content: center;
-            margin: auto;
-            margin-top: 1.5rem;
+        .__like-container {
+            line-height: 1;
+            display: inline-block;
         }
     }
     .form.__menu {
@@ -87,7 +85,6 @@ main {
             }
             @include desktop-query {
                 width: 15%;
-                justify-self: flex-start;
                 align-self: center;
             }
         }

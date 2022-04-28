@@ -29,6 +29,7 @@ body {
     flex-wrap: wrap;
     white-space: normal;
     margin: 0 !important;
+    width: 100%;
     @include tablet-query {
         justify-content: center;
         align-content: center;
@@ -37,6 +38,7 @@ body {
             flex-direction: column;
             justify-content: flex-start;
             flex-wrap: wrap;
+            min-height: 100vh;
         }
     }
     @include desktop-query {
@@ -47,6 +49,7 @@ body {
             flex-direction: column;
             justify-content: flex-start;
             flex-wrap: wrap;
+            min-height: 100vh;
         }
     }
 
