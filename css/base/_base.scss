@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
     white-space: normal;
     margin: 0 !important;
-    width: 100%;
+    overflow-x: hidden;
     @include tablet-query {
         justify-content: center;
         align-content: center;
