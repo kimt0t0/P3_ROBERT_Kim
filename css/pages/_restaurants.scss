@@ -29,6 +29,7 @@ main {
     flex-direction: column;
     margin-top: 250px;
     background-color: $grey-01;
+    width: 100vw;
     @include top-corners;
     @include tablet-query {
         margin: 0;
