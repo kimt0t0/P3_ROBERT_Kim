@@ -27,7 +27,7 @@ main {
 .section.__menu {
     display: flex;
     flex-direction: column;
-    margin-top: 250px;
+    margin-top: 240px;
     background-color: $grey-01;
     width: 100vw;
     @include top-corners;
