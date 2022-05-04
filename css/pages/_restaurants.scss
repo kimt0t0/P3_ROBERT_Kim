@@ -50,6 +50,12 @@ main {
                 padding-left: 2%;
             }
         }
+        @include tablet-query {
+            justify-content: center;
+            .__like-container {
+                padding: 0 1rem 0 1rem;
+            }
+        }
         .__title {
             font-family: Shrikhand;
             line-height: 1;
