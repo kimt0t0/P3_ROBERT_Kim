@@ -2,7 +2,6 @@ footer {
     padding: 1.5rem;
     background-color: $grey-05;
     @include tablet-query {
-        width: 100vw;
         display: flex;
         justify-content: center;
     }

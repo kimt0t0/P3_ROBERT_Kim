@@ -488,7 +488,6 @@ footer {
 
 @media screen and (min-width: 810px) {
   footer {
-    width: 100vw;
     display: flex;
     justify-content: center;
   }
@@ -1115,7 +1114,7 @@ footer .footer__content .menu-nav .list.__footer .__icone {
 
 .section.__restaurants .__display-articles .carousel__viewport .card {
   box-sizing: border-box;
-  width: 95%;
+  width: 20rem;
   height: 70px;
   padding: 0;
   margin-bottom: 20px;
@@ -1158,7 +1157,7 @@ footer .footer__content .menu-nav .list.__footer .__icone {
 
 .section.__restaurants .__display-articles .carousel__viewport .textcard {
   box-sizing: border-box;
-  width: 95%;
+  width: 20rem;
   height: 70px;
   padding: 0;
   margin-bottom: 20px;
@@ -1318,7 +1317,7 @@ main.restau-04 {
 .section.__menu {
   display: flex;
   flex-direction: column;
-  margin-top: 240px;
+  margin-top: 220px;
   background-color: #F6F6F6;
   width: 100vw;
   border-top-left-radius: 15px;
@@ -1467,6 +1466,8 @@ main.restau-04 {
   position: relative;
   border: none;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 992px) {
@@ -1512,10 +1513,12 @@ main.restau-04 {
   font-weight: lighter;
   font-size: 14px;
   line-height: 2;
+  margin-left: 1rem;
 }
 
 @media screen and (min-width: 810px) {
   .section.__menu .form.__menu .__entrees .subtitle.--big-letters, .section.__menu .form.__menu .__plats .subtitle.--big-letters, .section.__menu .form.__menu .__desserts .subtitle.--big-letters {
+    margin-left: 0;
     text-align: center;
   }
 }
@@ -1558,7 +1561,7 @@ main.restau-04 {
 
 .section.__menu .form.__menu .__entrees .__textcard, .section.__menu .form.__menu .__plats .__textcard, .section.__menu .form.__menu .__desserts .__textcard {
   box-sizing: border-box;
-  width: 95%;
+  width: 20rem;
   height: 70px;
   padding: 0;
   margin-bottom: 20px;
@@ -1569,8 +1572,10 @@ main.restau-04 {
   box-shadow: 5px 5px 5px #dddddd;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+  min-width: 95%;
   display: flex;
   flex-direction: row;
+  align-self: center;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
@@ -1587,7 +1592,29 @@ main.restau-04 {
 
 @media screen and (min-width: 810px) {
   .section.__menu .form.__menu .__entrees .__textcard, .section.__menu .form.__menu .__plats .__textcard, .section.__menu .form.__menu .__desserts .__textcard {
+    min-width: 50%;
     margin: auto auto 1rem auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section.__menu .form.__menu .__entrees .__textcard, .section.__menu .form.__menu .__plats .__textcard, .section.__menu .form.__menu .__desserts .__textcard {
+    min-width: 95%;
+  }
+}
+
+@media screen and (min-width: 992px) and (hover: hover) {
+  .section.__menu .form.__menu .__entrees .__textcard .carousel__snapper, .section.__menu .form.__menu .__plats .__textcard .carousel__snapper, .section.__menu .form.__menu .__desserts .__textcard .carousel__snapper {
+    animation-name: tonext, snap;
+    animation-timing-function: ease-in-out;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+  }
+}
+
+@media screen and (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .section.__menu .form.__menu .__entrees .__textcard .carousel__snapper, .section.__menu .form.__menu .__plats .__textcard .carousel__snapper, .section.__menu .form.__menu .__desserts .__textcard .carousel__snapper {
+    animation-name: none;
   }
 }
 

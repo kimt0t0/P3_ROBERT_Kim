@@ -31,7 +31,7 @@ main {
 .section.__menu {
     display: flex;
     flex-direction: column;
-    margin-top: 240px;
+    margin-top: 220px;
     background-color: $grey-01;
     width: 100vw;
     @include top-corners;
@@ -105,6 +105,8 @@ main {
             position: relative;
             border: none;
             margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
             @include desktop-query {
                 width: 25%;
             }
@@ -126,7 +128,9 @@ main {
                 font-weight: lighter;
                 font-size: 14px;
                 line-height: 2;
+                margin-left: 1rem;
                 @include tablet-query {
+                    margin-left: 0;
                     text-align: center;
                 }
                 &::after {
@@ -147,15 +151,21 @@ main {
             .__textcard {
                 @include textcard;
                 @include top-corners;
+                min-width: 95%;
                 display: flex;
                 flex-direction: row;
+                align-self: center;
                 position: relative;
                 white-space: nowrap;
                 overflow: hidden;
                 opacity: 0;
                 cursor: pointer;
                 @include tablet-query {
+                    min-width: 50%;
                     margin: auto auto 1rem auto;
+                }
+                @include desktop-query {
+                    min-width: 95%;
                 }
                 .__display-text {
                     display: flex;
