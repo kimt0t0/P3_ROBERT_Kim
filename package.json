@@ -1,7 +1,7 @@
 {
   "name": "p3_robert_kim",
   "version": "1.0.0",
-  "description": "",
+  "description":"",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch css/style.scss:css/style.css --style expanded",
@@ -9,5 +9,6 @@
   },
   "author": "ROBERT_Kim",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 4 versions",
+  "description": ""
 }

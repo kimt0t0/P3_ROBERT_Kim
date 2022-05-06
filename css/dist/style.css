@@ -133,7 +133,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
   white-space: normal;
   margin: 0 !important;
   overflow-x: hidden;
@@ -1308,6 +1307,13 @@ main.restau-04 {
   }
 }
 
+@media screen and (min-width: 810px) {
+  main {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+}
+
 /* PAGES > RESTAURANTS > MAIN */
 .section.__menu {
   display: flex;
@@ -1582,7 +1588,6 @@ main.restau-04 {
 @media screen and (min-width: 810px) {
   .section.__menu .form.__menu .__entrees .__textcard, .section.__menu .form.__menu .__plats .__textcard, .section.__menu .form.__menu .__desserts .__textcard {
     margin: auto auto 1rem auto;
-    width: 380px;
   }
 }
 

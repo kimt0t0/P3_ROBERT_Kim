@@ -21,6 +21,10 @@ main {
             background: $grey-01;
         }
     }
+@include tablet-query {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 }
 
 /* PAGES > RESTAURANTS > MAIN */
@@ -152,7 +156,6 @@ main {
                 cursor: pointer;
                 @include tablet-query {
                     margin: auto auto 1rem auto;
-                    width: 380px;
                 }
                 .__display-text {
                     display: flex;
