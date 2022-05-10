@@ -32,11 +32,13 @@ main {
     display: flex;
     flex-direction: column;
     margin-top: 220px;
+    padding-bottom: 3em;
     background-color: $grey-01;
     width: 100vw;
-    @include top-corners;
+    @include top-corners(25px);
     @include tablet-query {
         margin: 0;
+        padding-bottom: 0;
     }
     .__title-container {
         display: flex;
@@ -79,9 +81,6 @@ main {
             white-space: normal;
             width: 95%;
         }
-        @include tablet-query {
-            margin: auto;
-        }
         .no-mobile.__restau-photo {
             display: none;
             @include tablet-query {
@@ -91,7 +90,7 @@ main {
                 width: 30%;
                 height: auto;
                 border-radius: 15px;
-                @include top-corners;
+                @include top-corners(15px);
                 @include bottom-corners;
                 @include border($grey-03);
             }
@@ -104,9 +103,11 @@ main {
             z-index: 1;
             position: relative;
             border: none;
+            height: 320px;
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             @include desktop-query {
                 width: 25%;
             }
@@ -150,7 +151,7 @@ main {
             }
             .__textcard {
                 @include textcard;
-                @include top-corners;
+                @include top-corners(15px);
                 min-width: 95%;
                 display: flex;
                 flex-direction: row;
@@ -162,7 +163,6 @@ main {
                 cursor: pointer;
                 @include tablet-query {
                     min-width: 50%;
-                    margin: auto auto 1rem auto;
                 }
                 @include desktop-query {
                     min-width: 95%;

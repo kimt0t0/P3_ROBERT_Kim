@@ -1,7 +1,7 @@
 /* MIXINS > ANGLES */
-@mixin top-corners {
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+@mixin top-corners($angle: 0px) {
+    border-top-left-radius: $angle;
+    border-top-right-radius: $angle;
 }
 
 @mixin bottom-corners {
@@ -21,7 +21,6 @@
     width: 20rem;
     height: 70px;
     padding: 0;
-    margin-bottom: 20px;
     background-color: white;
     @include bottom-corners;
     @include border($grey-03);

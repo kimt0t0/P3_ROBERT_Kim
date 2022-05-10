@@ -3,7 +3,7 @@
     background-image: $gradient-01;
     color: white;
     padding: 15px;
-    margin-bottom: 50px;
+    margin: 4em;
     border-radius: 50px;
     transition: all 800ms ease-in-out;
     @include small-bold; 
@@ -28,6 +28,7 @@
         margin: auto;
         @include tablet-query {
             width: 30%;
+            margin: 2em auto 3em auto;
         }
         @include desktop-query {
             width: 10%;

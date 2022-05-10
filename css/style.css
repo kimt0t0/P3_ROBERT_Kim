@@ -314,7 +314,7 @@ body ul {
   background-image: linear-gradient(to top left, #9356DC, #FF79DA);
   color: white;
   padding: 15px;
-  margin-bottom: 50px;
+  margin: 4em;
   border-radius: 50px;
   transition: all 800ms ease-in-out;
   font-size: 12px;
@@ -367,6 +367,7 @@ body ul {
 @media screen and (min-width: 810px) {
   .btn.__order {
     width: 30%;
+    margin: 2em auto 3em auto;
   }
 }
 @media screen and (min-width: 992px) {
@@ -654,7 +655,6 @@ footer .footer__content .menu-nav .list.__footer .__icone {
 }
 
 .section {
-  padding-bottom: 50px;
   width: 100vw;
   /* GEOLOCALISATION */
   /* FONCTIONNEMENT */
@@ -666,6 +666,29 @@ footer .footer__content .menu-nav .list.__footer .__icone {
     justify-content: center;
   }
 }
+@media screen and (min-width: 992px) {
+  .section {
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 992px) and (hover: hover) {
+  .section .carousel__snapper {
+    -webkit-animation-name: tonext, snap;
+            animation-name: tonext, snap;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 4000ms;
+            animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+  }
+}
+@media screen and (min-width: 992px) and (prefers-reduced-motion: reduce) {
+  .section .carousel__snapper {
+    -webkit-animation-name: none;
+            animation-name: none;
+  }
+}
 .section.__infoposition {
   background-color: #F6F6F6;
   text-align: center;
@@ -673,7 +696,6 @@ footer .footer__content .menu-nav .list.__footer .__icone {
 @media screen and (min-width: 810px) {
   .section.__infoposition {
     width: 520px;
-    height: 240px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1040,6 +1062,7 @@ footer .footer__content .menu-nav .list.__footer .__icone {
 }
 .section.__restaurants {
   background-color: #F6F6F6;
+  padding: 2.5% 2.5% 10% 2.5%;
 }
 @media screen and (min-width: 810px) {
   .section.__restaurants {
@@ -1180,7 +1203,6 @@ footer .footer__content .menu-nav .list.__footer .__icone {
   width: 20rem;
   height: 70px;
   padding: 0;
-  margin-bottom: 20px;
   background-color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -1219,7 +1241,6 @@ footer .footer__content .menu-nav .list.__footer .__icone {
   width: 20rem;
   height: 70px;
   padding: 0;
-  margin-bottom: 20px;
   background-color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -1368,14 +1389,16 @@ main.restau-04 {
   display: flex;
   flex-direction: column;
   margin-top: 220px;
+  padding-bottom: 3em;
   background-color: #F6F6F6;
   width: 100vw;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 @media screen and (min-width: 810px) {
   .section.__menu {
     margin: 0;
+    padding-bottom: 0;
   }
 }
 .section.__menu .__title-container {
@@ -1460,11 +1483,6 @@ main.restau-04 {
             animation-name: none;
   }
 }
-@media screen and (min-width: 810px) {
-  .section.__menu .form.__menu {
-    margin: auto;
-  }
-}
 .section.__menu .form.__menu .no-mobile.__restau-photo {
   display: none;
 }
@@ -1512,9 +1530,11 @@ main.restau-04 {
   z-index: 1;
   position: relative;
   border: none;
+  height: 320px;
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 @media screen and (min-width: 992px) {
   .section.__menu .form.__menu .__entrees, .section.__menu .form.__menu .__plats, .section.__menu .form.__menu .__desserts {
@@ -1608,7 +1628,6 @@ main.restau-04 {
   width: 20rem;
   height: 70px;
   padding: 0;
-  margin-bottom: 20px;
   background-color: white;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -1635,7 +1654,6 @@ main.restau-04 {
 @media screen and (min-width: 810px) {
   .section.__menu .form.__menu .__entrees .__textcard, .section.__menu .form.__menu .__plats .__textcard, .section.__menu .form.__menu .__desserts .__textcard {
     min-width: 50%;
-    margin: auto auto 1rem auto;
   }
 }
 @media screen and (min-width: 992px) {
