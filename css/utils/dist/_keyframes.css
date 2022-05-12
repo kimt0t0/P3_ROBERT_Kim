@@ -1,0 +1,108 @@
+/* LOADING-SPINNER */
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3D(-50%, -50%, 0) rotate(360deg);
+  }
+}
+
+@keyframes load-and-fade {
+  50% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  95% {
+    opacity: 0;
+    z-index: 0;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+/* CAROUSEL */
+@keyframes tonext {
+  75% {
+    left: 0;
+  }
+  95% {
+    left: 100%;
+  }
+  98% {
+    left: 100%;
+  }
+  99% {
+    left: 0%;
+  }
+}
+
+@keyframes tostart {
+  75% {
+    left: 0%;
+  }
+  95% {
+    left: -300%;
+  }
+  98% {
+    left: -300%;
+  }
+  99% {
+    left: 0%;
+  }
+}
+
+@keyframes snap {
+  96% {
+    scroll-snap-align: center;
+  }
+  97% {
+    scroll-snap-align: none;
+  }
+  99% {
+    scroll-snap-align: none;
+  }
+  100% {
+    scroll-snap-align: center;
+  }
+}
+
+/* APPARITION PROGRESSIVE DU MENU */
+@keyframes reveal-menu {
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=_keyframes.css.map */

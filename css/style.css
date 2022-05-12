@@ -1574,7 +1574,7 @@ main.restau-04 {
   bottom: 0;
   left: 0;
 }
-.section.__menu .form.__menu .__entrees .subtitle.--big-letters, .section.__menu .form.__menu .__plats .subtitle.--big-letters, .section.__menu .form.__menu .__desserts .subtitle.--big-letters {
+.section.__menu .form.__menu .__entrees .subtitle, .section.__menu .form.__menu .__plats .subtitle, .section.__menu .form.__menu .__desserts .subtitle {
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 14px;
@@ -1582,31 +1582,31 @@ main.restau-04 {
   margin-left: 1rem;
 }
 @media screen and (min-width: 810px) {
-  .section.__menu .form.__menu .__entrees .subtitle.--big-letters, .section.__menu .form.__menu .__plats .subtitle.--big-letters, .section.__menu .form.__menu .__desserts .subtitle.--big-letters {
+  .section.__menu .form.__menu .__entrees .subtitle, .section.__menu .form.__menu .__plats .subtitle, .section.__menu .form.__menu .__desserts .subtitle {
     margin-left: 0;
     text-align: center;
   }
 }
-.section.__menu .form.__menu .__entrees .subtitle.--big-letters::after, .section.__menu .form.__menu .__plats .subtitle.--big-letters::after, .section.__menu .form.__menu .__desserts .subtitle.--big-letters::after {
+.section.__menu .form.__menu .__entrees .subtitle::after, .section.__menu .form.__menu .__plats .subtitle::after, .section.__menu .form.__menu .__desserts .subtitle::after {
   display: flex;
   content: "";
   width: 10%;
   border-bottom: 3px #99E2D0 solid;
 }
 @media screen and (min-width: 810px) {
-  .section.__menu .form.__menu .__entrees .subtitle.--big-letters::after, .section.__menu .form.__menu .__plats .subtitle.--big-letters::after, .section.__menu .form.__menu .__desserts .subtitle.--big-letters::after {
+  .section.__menu .form.__menu .__entrees .subtitle::after, .section.__menu .form.__menu .__plats .subtitle::after, .section.__menu .form.__menu .__desserts .subtitle::after {
     margin: auto;
     width: 6%;
   }
 }
 @media screen and (min-width: 992px) {
-  .section.__menu .form.__menu .__entrees .subtitle.--big-letters::after, .section.__menu .form.__menu .__plats .subtitle.--big-letters::after, .section.__menu .form.__menu .__desserts .subtitle.--big-letters::after {
+  .section.__menu .form.__menu .__entrees .subtitle::after, .section.__menu .form.__menu .__plats .subtitle::after, .section.__menu .form.__menu .__desserts .subtitle::after {
     margin: auto;
     width: 6%;
   }
 }
 @media screen and (min-width: 992px) and (hover: hover) {
-  .section.__menu .form.__menu .__entrees .subtitle.--big-letters::after .carousel__snapper, .section.__menu .form.__menu .__plats .subtitle.--big-letters::after .carousel__snapper, .section.__menu .form.__menu .__desserts .subtitle.--big-letters::after .carousel__snapper {
+  .section.__menu .form.__menu .__entrees .subtitle::after .carousel__snapper, .section.__menu .form.__menu .__plats .subtitle::after .carousel__snapper, .section.__menu .form.__menu .__desserts .subtitle::after .carousel__snapper {
     -webkit-animation-name: tonext, snap;
             animation-name: tonext, snap;
     -webkit-animation-timing-function: ease-in-out;
@@ -1618,7 +1618,7 @@ main.restau-04 {
   }
 }
 @media screen and (min-width: 992px) and (prefers-reduced-motion: reduce) {
-  .section.__menu .form.__menu .__entrees .subtitle.--big-letters::after .carousel__snapper, .section.__menu .form.__menu .__plats .subtitle.--big-letters::after .carousel__snapper, .section.__menu .form.__menu .__desserts .subtitle.--big-letters::after .carousel__snapper {
+  .section.__menu .form.__menu .__entrees .subtitle::after .carousel__snapper, .section.__menu .form.__menu .__plats .subtitle::after .carousel__snapper, .section.__menu .form.__menu .__desserts .subtitle::after .carousel__snapper {
     -webkit-animation-name: none;
             animation-name: none;
   }
@@ -1715,14 +1715,14 @@ main.restau-04 {
 .section.__menu .form.__menu .__entrees .__textcard .__card-check, .section.__menu .form.__menu .__plats .__textcard .__card-check, .section.__menu .form.__menu .__desserts .__textcard .__card-check {
   transition: all 600ms ease-in-out;
 }
-.section.__menu .form.__menu .__entrees .__textcard .__card-check .__input.--menu, .section.__menu .form.__menu .__plats .__textcard .__card-check .__input.--menu, .section.__menu .form.__menu .__desserts .__textcard .__card-check .__input.--menu {
+.section.__menu .form.__menu .__entrees .__textcard .__card-check .__input.menu, .section.__menu .form.__menu .__plats .__textcard .__card-check .__input.menu, .section.__menu .form.__menu .__desserts .__textcard .__card-check .__input.menu {
   position: absolute;
   right: -50%;
   width: 100px;
   height: auto;
   opacity: 0;
 }
-.section.__menu .form.__menu .__entrees .__textcard .__card-check .__icone.--menu, .section.__menu .form.__menu .__plats .__textcard .__card-check .__icone.--menu, .section.__menu .form.__menu .__desserts .__textcard .__card-check .__icone.--menu {
+.section.__menu .form.__menu .__entrees .__textcard .__card-check .__icone.menu, .section.__menu .form.__menu .__plats .__textcard .__card-check .__icone.menu, .section.__menu .form.__menu .__desserts .__textcard .__card-check .__icone.menu {
   opacity: 100%;
   position: absolute;
   right: -20%;
@@ -1736,16 +1736,16 @@ main.restau-04 {
   background-color: #99E2D0;
   color: white;
 }
-.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__input.--menu, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__input.--menu, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__input.--menu {
+.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__input.menu, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__input.menu, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__input.menu {
   transform: translateX(-150%);
   transition: transform 600ms ease-in-out;
 }
-.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__icone.--menu, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__icone.--menu, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__icone.--menu {
+.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__icone.menu, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__icone.menu, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__icone.menu {
   transform: translateX(-100%);
   transition: transform 600ms ease-in-out;
   cursor: pointer;
 }
-.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__icone.--menu .fa-solid, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__icone.--menu .fa-solid, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__icone.--menu .fa-solid {
+.section.__menu .form.__menu .__entrees .__textcard:hover .__card-check .__icone.menu .fa-solid, .section.__menu .form.__menu .__plats .__textcard:hover .__card-check .__icone.menu .fa-solid, .section.__menu .form.__menu .__desserts .__textcard:hover .__card-check .__icone.menu .fa-solid {
   transform: rotate(1turn);
   transition: transform 1200ms ease-in-out;
 }
